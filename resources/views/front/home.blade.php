@@ -6,7 +6,7 @@
     <div id="carousel">
         <div id="owl-demo" class="owl-carousel owl-theme">
             <div class="item">
-                <img src="{{URL::asset('front')}}/img/first.jpg" alt="">
+                <img src="{{URL::asset('front')}}/img/FULL.png" alt="">
                 <div class="line">
                     <div class="text hide-s">
                         <div class="line">
