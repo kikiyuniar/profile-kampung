@@ -35,7 +35,7 @@
                 </div>
                 <div class="s-12 m-6 l-6">
                     <div class="social right">
-                        <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-instagram_circle"></i></a> | <a href="{{ url('/login') }}"><i class="icon-signin"></i></a>
+                        <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-instagram_circle"></i></a> | <a href="{{ url('/login') }}" target="_blank"><i class="icon-signin"></i></a>
                     </div>
                 </div>
             </div>

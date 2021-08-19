@@ -8,41 +8,25 @@
     <!-- FIRST BLOCK -->
     <div id="first-block">
         <div class="line">
-            <h1>News</h1>
+            <h1>Download <br>Transparansasi </h1>
             <p>Kampung Lebak Jaya 5 Utara Merupakan Kampung yang bersinergitas tinggi dan penerapan dalam <br>sebuah
                 kemajuan bersama dalam warga dan untuk Indonesia.</p>
-            <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
         </div>
     </div>
 
     <!-- LATEST NEWS -->
     <div id="latest-news">
         <div class="container">
-            <h2 class="section-title">Latest News
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum veniam porro dicta necessitatibus
-                    atque eligendi ipsa debitis. Veritatis consectetur, eligendi reiciendis laudantium sequi possimus,
-                    doloribus maxime expedita iure quidem omnis!</p>
+            <h2 class="section-title">Transparansasi
+                <p>Kampung Lebak Jaya 5 Utara</p>
             </h2>
-            <div class="card" style="width: 18rem;">
-                <img src="https://noorenergi.co.id/assets_foto_post/1620772565.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+            @foreach ($data as $item)
+            {!! nl2br($item->isi) !!}
+            @endforeach
 
-            <div class="card" style="width: 18rem;">
-                <img src="https://noorenergi.co.id/assets_foto_post/1620772565.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
+            <iframe style="height: 50rem"
+                src="https://drive.google.com/file/d/1cVOQQA60tUePYe0oNqEQKNwqYT3GZHO2/preview" frameBorder="1"
+                scrolling="auto" height="100%" width="100%"></iframe>
         </div>
     </div>
     <!-- CONTACT -->

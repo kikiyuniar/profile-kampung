@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/news-front', function () {
     return view('front/blog');
 });
-
+Route::get('/download', [NewsController::class, 'view_download']);
 Route::get('/admin', [AdminController::class, 'dashboard']);
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
@@ -43,5 +43,3 @@ Route::get('list_news', [BlogsController::class, 'list']);
 Route::get('/del/{id}', [BlogsController::class, 'del']);
 Route::get('search', [BlogsController::class, 'action']);
 // Route::get('/pagination', 'BlogsController@index');
-
-Route::get('/fetch_data', 'BlogsController@fetch_data');

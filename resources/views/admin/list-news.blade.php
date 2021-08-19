@@ -1,7 +1,7 @@
 @extends('master_admin.core')
 @section('title','Dashboard')
 @section('container2')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 
 <main>
     <div class="page-title-container">

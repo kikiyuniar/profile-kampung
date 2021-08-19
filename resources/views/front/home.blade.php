@@ -138,7 +138,7 @@
             </div>
             <div class="margin">
                 <div class="s-12 m-12 l-2 center transke">
-                    <a href="mediafire.com">
+                    <a href="download">
                         <i style="width: 200px;" class="icon-download">
                             <d style="font-family: Open Sans,Arial,sans-serif;">Download</d>
                         </i>

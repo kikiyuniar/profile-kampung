@@ -8,13 +8,8 @@ use App\Patient;
 
 class BlogsController extends Controller
 {
-    public function index()
-    {
-        return view('admin.news');
-    }
     public function list()
     {
-        // $post = Post::orderBy('created_at', 'desc')->paginate(5));
         $articles = DB::table('blogs')->orderBy('id', 'desc')->paginate(5);
         return view('admin.list-news', ['data' => $articles]);
     }
@@ -63,17 +58,5 @@ class BlogsController extends Controller
     {
         DB::table('blogs')->where('id', '=', $request->id)->delete();
         return redirect()->back()->with('danger', 'Berhasil Di Hapus');
-    }
-
-    function action(Request $request)
-    {
-        // get the search term
-        $text = $request->input('text');
-
-        // search the members table
-        $data = DB::table('blogs')->where('id', 'Like', $text)->get();
-
-        // return the results
-        return response()->json($data);
     }
 }
