@@ -53,7 +53,6 @@
                                 ?>
                                 <button class="btn btn-primary" type="submit">Submit</button>
                                 <a class="btn btn-danger" href="list_news">Cancel</a>
-                                {{-- <button class="btn btn-danger" type="submit">Cancel</button> --}}
                             </form>
                         </div>
                     </div>

@@ -36,12 +36,12 @@
                             </span>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-7 col-lg-9 col-xxl-10 text-end mb-1">
+                    {{-- <div class="col-12 col-sm-7 col-lg-9 col-xxl-10 text-end mb-1">
                         <div class="d-inline-block">
-                            <button class="btn btn-icon btn-icon-only btn-outline-muted btn-sm datatable-print"
-                                type="button" data-datatable="#datatableHover">
+                            <a href="print" class="btn btn-icon btn-icon-only btn-outline-muted btn-sm datatable-print" type="button"
+                                data-datatable="#datatableHover">
                                 <i data-cs-icon="print"></i>
-                            </button>
+                            </a>
                             <div class="d-inline-block datatable-export" data-datatable="#datatableHover">
                                 <button class="btn btn-icon btn-icon-only btn-outline-muted btn-sm dropdown"
                                     data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     @if ($message = Session::get('danger'))
                     <div style="text-align: center" class="alert alert-danger alert-dismissible fade show" role="alert">
                         <strong>{{ $message }}</strong>
@@ -72,10 +72,13 @@
                 <table class="table table-stripped">
                     <thead>
                         <tr>
-                            <th style="width: 20%" class="text-muted text-small text-uppercase" data-sorting_type="asc" data-column_name="id" style="cursor: pointer">Judul <span id="id_icon"></span></th>
+                            <th style="width: 20%" class="text-muted text-small text-uppercase" data-sorting_type="asc"
+                                data-column_name="id" style="cursor: pointer">Judul <span id="id_icon"></span></th>
                             <th style="width: 20%" class="text-muted text-small text-uppercase">Waktu</th>
-                            <th class="text-muted text-small text-uppercase" data-sorting_type="asc" data-column_name="post_title" style="cursor: pointer">Thumbnail <span id="post_title_icon"></span></th>
-                            <th class="text-muted text-small text-uppercase">Action</th>
+                            <th style="width: 40%" class="text-muted text-small text-uppercase" data-sorting_type="asc"
+                                data-column_name="post_title" style="cursor: pointer">Thumbnail <span
+                                    id="post_title_icon"></span></th>
+                            <th style="width: 15%" class="text-muted text-small text-uppercase">Action</th>
                         </tr>
                     </thead>
                     @foreach ($data as $item)
@@ -85,7 +88,7 @@
                             <td class="text-alternate">{{ date("l, d F Y", strtotime($item->waktu)) }}</td>
                             <td class="text-alternate">{!! nl2br($item->isi_thumbnail)!!}</td>
                             <td class="text-alternate">
-                                <button type="button" class="btn btn-outline-success">
+                                <a class="btn btn-outline-success mb-1" href="/{{ $item->slug }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-journal-text" viewBox="0 0 16 16">
                                         <path
@@ -96,8 +99,8 @@
                                             d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
                                     </svg>
                                     Detail
-                                </button>
-                                <a class="btn btn-outline-danger" href="/del/{{ $item->id}}">
+                                </a>
+                                <a class="btn btn-outline-danger mb-1" href="/del/{{ $item->id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash" viewBox="0 0 16 16">
                                         <path
@@ -119,6 +122,4 @@
         </div>
     </section>
 </main>
-
-
 @endsection

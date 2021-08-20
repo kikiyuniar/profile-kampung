@@ -18,13 +18,6 @@ class InputController extends Controller
     }
     public function update_transparant(Request $request)
     {
-        // DB::table('transparan')->where('id', $request->id)
-        //     ->update([
-        //         'judul'    => $request->judul,
-        //         'isi'      => $request->isi,
-        //     ]);
-        // return redirect()->back();
-
         DB::table('transparan')->where('id', $request->id)
             ->update([
                 'judul' => $request->input('judul'),

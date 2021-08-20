@@ -36,21 +36,21 @@
     <link rel="stylesheet" href="dashboard/css/vendor/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="dashboard/css/styles.css">
     <link rel="stylesheet" href="dashboard/css/main.css">
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">    
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="dashboard/css/vendor/datatables.min.css">
     <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/balloon/ckeditor.js"></script> -->
     <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/balloon-block/ckeditor.js"></script> -->
     <script src="dashboard/js/base/loader.js"></script>
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-    
+
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js">
     </script> --}}
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"> --}}
     {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css"> --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> --}}
+
 </head>
 
 <body>
@@ -65,7 +65,7 @@
                 <div class="user-container d-flex">
                     <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <img class="profile" alt="profile" src="img/profile/profile-9.jpg">
+                        <img class="profile" alt="profile" src="dashboard/img/profile/profile-9.jpg">
                         <div class="name">xsaz</div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end user-menu wide">
@@ -103,6 +103,23 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="list-unstyled list-inline text-center menu-icons">
+                    <li class="list-inline-item">
+                        <a id="pinButton" class="pin-button">
+                            <div id="jam"></div>:<div id="menit"></div>:<div id="detik"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled list-inline text-center menu-icons">
+                    <li class="list-inline-item">
+                        <a id="pinButton" class="pin-button">
+                            <?php
+                                $tgl = date('d-m-Y');
+                                echo date("l, d F Y", strtotime($tgl))
+                            ?>
+                        </a>
+                    </li>
+                </ul>
                 <div class="menu-container flex-grow-1">
                     <ul id="menu" class="menu">
                         <li>
@@ -118,7 +135,7 @@
                                 <span class="label">Transparansi Keuangan</span>
                             </a>
                         </li>
-                        
+
                         <li>
                             <a href="list_news" data-href="Pages.html">
                                 <i data-cs-icon="screen" class="icon" data-cs-size="18"></i>
@@ -507,18 +524,25 @@
         <script src="dashboard/js/scripts.js"></script>
         <script src="dashboard/js/cs/datatable.extend.js"></script>
         <script src="dashboard/js/plugins/datatable.boxedvariations.js"></script>
-        {{-- <script src="dashboard/js/vendor/datepicker/bootstrap-datepicker.min.js"></script> --}}
-        {{-- <script src="dashboard/js/vendor/datepicker/locales/bootstrap-datepicker.es.min.js"></script> --}}
-        {{-- <script src="dashboard/ js/plugins/datatable.editableboxed.js"></script> --}}
-        {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> --}}
-        {{-- <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script> --}}
-        {{-- <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script> --}}
+        <script>
+            window.setTimeout("waktu()", 1000);
+
+            function waktu() {
+                var waktu = new Date();
+                setTimeout("waktu()", 1000);
+                document.getElementById("jam").innerHTML = waktu.getHours();
+                document.getElementById("menit").innerHTML = waktu.getMinutes();
+                document.getElementById("detik").innerHTML = waktu.getSeconds();
+            }
+
+        </script>
         {{-- <script>
-        $(document).ready( function () {
-        $('#table_id').DataTable();
-        } );    
+            CKEDITOR.replace('isi_thumbnail', {
+                filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+                filebrowserUploadMethod: 'form'
+            });
+
         </script> --}}
-        
 </body>
 
 </html>
