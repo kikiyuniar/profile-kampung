@@ -58,10 +58,10 @@ class BlogsController extends Controller
 
         return view('admin.edit-news', ['data' => $detail]);
     }
-    public function view_edit_news(Request $request)
-    {
-        $detail = DB::table('blogs')->where('id', $request->id)->get();
+    // public function view_edit_news(Request $request)
+    // {
+    //     $detail = DB::table('blogs')->where('id', $request->id)->get();
 
-        return view('admin.edit-news', ['data' => $detail]);
-    }
+    //     return view('admin.edit-news', ['data' => $detail]);
+    // }
 }

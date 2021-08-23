@@ -17,8 +17,7 @@ class AuthController extends Controller
 {
     public function showFormLogin()
     {
-        if (Auth::check()) { // true sekalian session field di users nanti bisa dipanggil via Auth
-            //Login Success
+        if (Auth::check()) {
             return redirect('admin');
         }
         return view('admin\login');
@@ -26,30 +25,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        // $cek_account_email = DB::table('users')->where('email', $request->email)->count();
-        // $cek_account_password = User::where('email', $request->email)->count();
-        // if ($cek_account_email != 1) {
-        //     return Redirect()->back()->with('danger', 'Email Salah ');
-        // } elseif ($cek_account_email != 0) {
-        //     $view_username = DB::table('users')->where('email', $request->email)->get();
-        //     $cek_account_password = User::where('email', $request->email)->firstOrfail();
-
-        //     if (Hash::check($request->password, $cek_account_password->password)) {
-        //         foreach ($view_username as $username) {
-        //             $data = array();
-        //             session(['login_status' => $username->status]);
-        //         }
-
-        //         session(['berhasil_login' => true]);
-        //         return redirect('/admin');
-        //     } else {
-        //         return Redirect()->back()->with('danger', 'Password Salah ');
-        //     }
-        // }
-
-
         $view_username = DB::table('users')->where('email', $request->email)->get();
-        // $cek_msg = DB::table('contact')->where('status', 'Belum Terbaca')->count();
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             foreach ($view_username as $username) {
                 session(['login_name' => $username->name]);
@@ -61,7 +37,7 @@ class AuthController extends Controller
 
     public function showFormRegister()
     {
-        return view('admin\register');
+        return view('admin\add-account');
     }
 
     public function register(Request $request)
@@ -98,7 +74,7 @@ class AuthController extends Controller
 
         if ($simpan) {
             Session::flash('success', 'Register berhasil! Silahkan login untuk mengakses data');
-            return redirect('/admin');
+            return redirect('list_account');
         } else {
             Session::flash('errors', ['' => 'Register gagal! Silahkan ulangi beberapa saat lagi']);
         }
@@ -106,12 +82,48 @@ class AuthController extends Controller
 
     public function logout()
     {
-        Auth::logout(); // menghapus session yang aktif
+        Auth::logout();
         return redirect('/');
     }
 
     public function dashboard()
     {
         return view('admin.dashboard');
+    }
+
+    public function list()
+    {
+        $articles = DB::table('users')->orderBy('id', 'desc')->paginate(5);
+        return view('admin.list-account', ['data' => $articles]);
+    }
+
+    public function delete(Request $request)
+    {
+        DB::table('users')->where('id', '=', $request->id)->delete();
+        return redirect()->back()->with('danger', 'Berhasil Di Hapus');
+    }
+
+    public function view_profile()
+    {
+        $user_cek =  Auth::user()->name;
+        $view_profile = DB::table('users')->where('name', $user_cek)->get();
+        return view('admin.core', ['data' => $view_profile]);
+    }
+
+    public function show_edit_account(Request $request)
+    {
+        $detail = DB::table('users')->where('id', $request->id)->get();
+        return view('admin.edit-account', ['data' => $detail]);
+    }
+
+    public function action_edit_account(Request $request)
+    {
+        DB::table('users')->where('id', $request->id)
+            ->update([
+                'name' => $request->input('name'),
+                'email'       => $request->input('email'),
+                'password' => bcrypt($request->input('password'))
+            ]);
+        return redirect()->back()->with('success', 'Account Berhasil Diperbaruhi');
     }
 }

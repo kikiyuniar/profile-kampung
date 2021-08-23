@@ -31,7 +31,7 @@
         <div id="topbar">
             <div class="line">
                 <div class="s-12 m-6 l-6">
-                    <p>CONTACT US: <strong>0800 200 200</strong> | <strong>lebakjayautara@gmail.com</strong></p>
+                    <p>CONTACT <strong>EMAIL US</strong> : <strong><a style="color: #444" href="mailto:lebakjayau@gmail.com">lebakjayau@gmail.com</a></strong></p>
                 </div>
                 <div class="s-12 m-6 l-6">
                     <div class="social right">

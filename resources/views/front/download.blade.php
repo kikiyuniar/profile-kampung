@@ -23,10 +23,11 @@
             @foreach ($data as $item)
             {!! nl2br($item->isi) !!}
             @endforeach
-
-            <iframe style="height: 50rem"
-                src="https://drive.google.com/file/d/1cVOQQA60tUePYe0oNqEQKNwqYT3GZHO2/preview" frameBorder="1"
-                scrolling="auto" height="100%" width="100%"></iframe>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" style="height: 50rem"
+                    src="https://drive.google.com/file/d/1cVOQQA60tUePYe0oNqEQKNwqYT3GZHO2/preview" frameBorder="1"
+                    scrolling="auto" height="100%" width="100%"></iframe>
+            </div>
         </div>
     </div>
     <!-- CONTACT -->
