@@ -43,7 +43,7 @@
         <nav>
             <div class="line">
                 <div class="s-12 l-1">
-                    <p class="logo"><a style="color: white;" href="/"><strong>lebakjaya</strong><i>5Utara</i></a></p>
+                    <p class="logo"><a style="color: white;" href="/"><strong>lebakjaya</strong><i>5AUtara</i></a></p>
                 </div>
                 <div class="top-nav s-12 l-10">
                     <p class="nav-text"></p>

@@ -6,6 +6,7 @@ use App\Http\Controllers\InputController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,5 +53,9 @@ Route::group(
         Route::get('/{slug}', [BlogsController::class, 'detail']);
         Route::get('view_edit_news', [BlogsController::class, 'view_edit_news']);
         Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
+        // Route::post('/contact', [ContactController::class, 'sendMail']);
+
+        // Route::get('/contact', 'Contact@showContactForm');
+        // Route::post('/contact', 'ContactController@sendMail');
     }
 );
