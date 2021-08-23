@@ -9,7 +9,7 @@
                     <h1 class="mb-0 pb-0 display-4" id="title">Dashboards</h1>
                     <nav class="breadcrumb-container d-inline-block" aria-label="breadcrumb">
                         <ul class="breadcrumb pt-0">
-                            <li class="breadcrumb-item"><a href="Dashboards.Default.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -27,10 +27,16 @@
                         <div class="col-auto">
                             <i data-cs-icon="board-1" class="text-primary"></i>
                         </div>
-                        <div class="col">
-                            <a href="Dashboards.Default.html" class="heading stretched-link d-block">Default</a>
-                            <div class="text-muted">Home screen that contains stats, charts, call to action buttons and various listing elements.</div>
+                        <div class="row">
+                            <div class="col-10">
+                                <a href="{{url('list_news')}}" class="heading stretched-link d-block">News</a>
+                                <div class="text-muted">Count News.</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="text-muted" style="font-size: 300%;">{{$blog}}</div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -40,9 +46,14 @@
                         <div class="col-auto">
                             <i data-cs-icon="board-3" class="text-primary"></i>
                         </div>
-                        <div class="col">
-                            <a href="Dashboards.Visual.html" class="heading stretched-link d-block">Visual</a>
-                            <div class="text-muted">A dashboard implementation that mainly has visual items such as banners, call to action buttons and stats.</div>
+                        <div class="row">
+                            <div class="col-10">
+                                <a href="Dashboards.Default.html" class="heading stretched-link d-block">Messages</a>
+                                <div class="text-muted">Count Messages.</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="text-muted" style="font-size: 300%;">8</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,9 +64,14 @@
                         <div class="col-auto">
                             <i data-cs-icon="board-2" class="text-primary"></i>
                         </div>
-                        <div class="col">
-                            <a href="Dashboards.Analytic.html" class="heading stretched-link d-block">Analytic</a>
-                            <div class="text-muted">Another dashboard alternative that focused on data, listing and charts.</div>
+                        <div class="row">
+                            <div class="col-10">
+                                <a href="{{url('list_account')}}" class="heading stretched-link d-block">Acoounts</a>
+                                <div class="text-muted">Count Acoounts.</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="text-muted" style="font-size: 300%;">{{$user}}</div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -10,17 +10,12 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        // $blog = DB::table('count_blogs')->get();
-        // $user = DB::table('count_users')->get();
+        $blog = DB::table('blogs')->count();
+        $user = DB::table('users')->count();
         // $msg = DB::table('count_msg')->get();
-        // $pjc = DB::table('count_project')->get();
-        // return view('page_layout.dashboard',[
-        //     'blog' => $blog,
-        //     'user' => $user,
-        //     'msg' => $msg,
-        //     'project' => $pjc
-        //     ]);
-
-        return view('admin.dashboard');
+        return view('admin.dashboard', [
+            'blog' => $blog,
+            'user' => $user
+        ]);
     }
 }
