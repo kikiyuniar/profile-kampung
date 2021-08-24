@@ -14,6 +14,7 @@
                     <h2 class="small-title">Floating Label</h2>
                     <div class="card mb-5">
                         <div class="card-body">
+                            @foreach ($data as $item)     
                             <form action="/action_edit_news" method="post">
                                 @csrf
                                 @if ($message = Session::get('success'))
@@ -24,7 +25,6 @@
                                         aria-label="Close"></button>
                                 </div>
                                 @endif
-                                @foreach ($data as $item)     
                                 <input type="text" name="id" value="{{$item->id}}" hidden>                               
                                 <div class="form-floating mb-3">
                                     <input type="text" name="judul" class="form-control" placeholder="judul_news" value="{{$item->judul}}" required>
@@ -49,8 +49,8 @@
                                 </div>
                                 <button class="btn btn-primary" type="submit">Update</button>
                                 <a class="btn btn-danger" href="list_news">Back</a>
-                                @endforeach                                                            
                             </form>
+                            @endforeach                                                            
                         </div>
                     </div>
                 </section>

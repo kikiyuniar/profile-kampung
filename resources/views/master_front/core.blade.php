@@ -56,7 +56,7 @@
                                 class="icon-twitter_circle"></i></a>
                         <a href="https://instagram.com/kkn_tambaksari_4?utm_medium=copy_link" target="_blank"><i
                                 class="icon-instagram_circle"></i></a> |
-                        <a href="{{ url('/login') }}" target="_blank"><i class="icon-signin"></i></a>
+                        <a href="login" target="_blank"><i class="icon-signin"></i></a>
                     </div>
                 </div>
             </div>
