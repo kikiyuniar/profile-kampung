@@ -20,7 +20,7 @@ class AuthController extends Controller
         if (Auth::check()) {
             return redirect('admin');
         }
-        return view('admin\login');
+        return view('admin.login');
     }
 
     public function login(Request $request)
@@ -37,7 +37,7 @@ class AuthController extends Controller
 
     public function showFormRegister()
     {
-        return view('admin\add-account');
+        return view('admin.add-account');
     }
 
     public function register(Request $request)
