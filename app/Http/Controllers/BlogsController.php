@@ -59,7 +59,7 @@ class BlogsController extends Controller
     }
     public function detail(Request $request)
     {
-        $detail = DB::table('blogs')->where('slug', $request->slug)->get();
+        $detail = DB::table('blogs')->where('id', $request->id)->get();
 
         return view('admin.edit-news', ['data' => $detail]);
     }

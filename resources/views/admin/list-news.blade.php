@@ -76,7 +76,7 @@
                             <td class="text-alternate">{{ date("l, d F Y", strtotime($item->waktu)) }}</td>
                             <td class="text-alternate">{!! nl2br($item->isi_thumbnail)!!}</td>
                             <td class="text-alternate">
-                                <a class="btn btn-outline-success mb-1" href="/{{ $item->slug }}">
+                                <a class="btn btn-outline-success mb-1" href="/{{ $item->id }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-journal-text" viewBox="0 0 16 16">
                                         <path

@@ -61,7 +61,7 @@ Route::group(
         Route::post('add_news', [BlogsController::class, 'add_news']);
         Route::get('list_news', [BlogsController::class, 'list']);
         Route::get('/del/{id}', [BlogsController::class, 'del']);
-        Route::get('/{slug}', [BlogsController::class, 'detail']);
+        Route::get('/{id}', [BlogsController::class, 'detail']);
         Route::get('view_edit_news', [BlogsController::class, 'view_edit_news']);
         // Route::post('/contact', [ContactController::class, 'sendMail']);
 
