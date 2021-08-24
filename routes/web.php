@@ -7,6 +7,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\StrukturController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,6 +55,7 @@ Route::group(
 
         Route::get('/edit/{id}', [AuthController::class, 'show_edit_account']);
         Route::post('action_edit_account', [AuthController::class, 'action_edit_account']);
+        Route::get('list_contact', [ContactController::class, 'view_contact']);
 
         Route::get('transparan', [InputController::class, 'index']);
         Route::post('update_transparan', [InputController::class, 'update_transparant']);
@@ -63,6 +67,11 @@ Route::group(
         Route::get('/del/{id}', [BlogsController::class, 'del']);
         Route::get('/{id}', [BlogsController::class, 'detail']);
         Route::get('view_edit_news', [BlogsController::class, 'view_edit_news']);
+
+        Route::post('add_contact', [ContactController::class, 'add_contact']);
+        Route::get('/del/{id}', [ContactController::class, 'del']);
+        Route::post('update_struktur', [StrukturController::class, 'update_struktur']);
+        Route::get('struktur', [StrukturController::class, 'index']);
         // Route::post('/contact', [ContactController::class, 'sendMail']);
 
         // Route::get('/contact', 'Contact@showContactForm');

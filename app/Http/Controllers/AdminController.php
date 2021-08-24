@@ -12,10 +12,11 @@ class AdminController extends Controller
     {
         $blog = DB::table('blogs')->count();
         $user = DB::table('users')->count();
-        // $msg = DB::table('count_msg')->get();
+        $msg = DB::table('contact')->count();
         return view('admin.dashboard', [
             'blog' => $blog,
-            'user' => $user
+            'user' => $user,
+            'contact' => $msg
         ]);
     }
 }

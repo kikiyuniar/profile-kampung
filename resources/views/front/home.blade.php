@@ -277,14 +277,24 @@
                 </div>
                 <div class="s-12 m-12 l-5">
                     <h3>Contact form</h3>
-                    <form class="customform" action="" method="POST">
-                        {{ csrf_field() }}
+                    <form class="customform" action="{{('add_contact')}}" method="POST">
+                        @csrf
+                                @if(session('errors'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Something it's wrong:                                    
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                @endif
                         <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your e-mail"
                                 type="text" />
                         </div>
                         <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text" />
                         </div>
-                        <div class="s-12"><textarea placeholder="Your massage" name="message" rows="5"></textarea></div>
+                        <div class="s-12"><textarea placeholder="Your massage" name="pesan" rows="5"></textarea></div>
                         <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
                     </form>
                 </div>

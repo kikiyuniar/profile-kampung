@@ -172,12 +172,12 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#" data-href="Pages.Blog.html">
+                                    <a href="{{url('struktur')}}" data-href="Pages.Blog.html">
                                         <span class="label">Struktur Organisasi</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#blog" data-href="Pages.Blog.html">
+                                    <a href="{{url('/list_contact')}}" data-href="Pages.Blog.html">
                                         <span class="label">Contacts</span>
                                     </a>
                                 </li>

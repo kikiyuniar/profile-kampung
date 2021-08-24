@@ -48,11 +48,11 @@
                         </div>
                         <div class="row">
                             <div class="col-10">
-                                <a href="Dashboards.Default.html" class="heading stretched-link d-block">Messages</a>
+                                <a href="{{url('list_contact')}}" class="heading stretched-link d-block">Messages</a>
                                 <div class="text-muted">Count Messages.</div>
                             </div>
                             <div class="col-2">
-                                <div class="text-muted" style="font-size: 300%;">8</div>
+                                <div class="text-muted" style="font-size: 300%;">{{$contact}}</div>
                             </div>
                         </div>
                     </div>
