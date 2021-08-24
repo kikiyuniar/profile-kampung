@@ -9,17 +9,17 @@
                 <img src="{{URL::asset('front')}}/img/2.jpg" alt="">
                 <div class="line">
                     <div class="text hide-s">
-                        <div class="line">
+                        {{-- <div class="line">
                             <div class="prev-arrow hide-s hide-m">
                                 <i class="icon-chevron_left"></i>
                             </div>
                             <div class="next-arrow hide-s hide-m">
                                 <i class="icon-chevron_right"></i>
                             </div>
-                        </div>
-                        <h2>Free Onepage Responsive Template</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna.</p>
+                        </div> --}}
+                        {{-- <h2>Free Onepage Responsive Template</h2> --}}
+                        {{-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna.</p> --}}
                     </div>
                 </div>
             </div>
@@ -27,17 +27,17 @@
                 <img src="{{URL::asset('front')}}/img/1.jpg" alt="">
                 <div class="line">
                     <div class="text hide-s">
-                        <div class="line">
+                        {{-- <div class="line">
                             <div class="prev-arrow hide-s hide-m">
                                 <i class="icon-chevron_left"></i>
                             </div>
                             <div class="next-arrow hide-s hide-m">
                                 <i class="icon-chevron_right"></i>
                             </div>
-                        </div>
-                        <h2>Fully Responsive Components</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna.</p>
+                        </div> --}}
+                        {{-- <h2>Fully Responsive Components</h2> --}}
+                        {{-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna.</p> --}}
                     </div>
                 </div>
             </div>
@@ -45,17 +45,17 @@
                 <img src="{{URL::asset('front')}}/img/3.jpg" alt="">
                 <div class="line">
                     <div class="text hide-s">
-                        <div class="line">
+                        {{-- <div class="line">
                             <div class="prev-arrow hide-s hide-m">
                                 <i class="icon-chevron_left"></i>
                             </div>
                             <div class="next-arrow hide-s hide-m">
                                 <i class="icon-chevron_right"></i>
                             </div>
-                        </div>
-                        <h2>Build new Layout in 10 minutes!</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna.</p>
+                        </div> --}}
+                        {{-- <h2>Build new Layout in 10 minutes!</h2> --}}
+                        {{-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna.</p> --}}
                     </div>
                 </div>
             </div>
@@ -74,77 +74,84 @@
     <div id="features">
         <div class="line">
             <div class="margin">
-                <div class="col">
-                    <div class="s-12 m-6 l-3 margin-bottom">
+                <div class="col padding">
+                    <div class="container row justify-content-around">
+                        <div class="col-md-4">
+                            <div class="s-12 m-6 l-3 margin-bottom">
+                                <i class="icon-star icon3x"></i>
+                                <h2>Visi</h2>
+                                <p>
+                                    Terwujudnya Usaha Kecil Menengah yang Maju dan Mandiri . <br>
+                                    Transparansi administrasi menuju tata kelola desa yang baik dan efisien.
+                                </p>
+                            </div>
+                            <div class="s-12 m-6 l-3 margin-bottom">
+                                <i class="icon-star icon3x"></i>
+                                <h2>Misi</h2>
+                                <p>
+                                    Meningkatkan sumber daya manusia. <br>
+                                    Menjaga ketentraman & ketertiban untuk mewujudkan desa yang aman dan makmur. <br>
+                                    Meningkatkan partisipasi masyarakat dengan membuka komunikasi yang baik.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offset-md-4">
+                            <a href="{{url('struktur')}}" target="_blank" rel="noopener noreferrer">
+                                <div class="s-12 m-6 l-3 margin-bottom">
+                                    <i class="icon-tablet icon3x"></i>
+                                    <h2>Struktur Organisasi</h2>
+                                    <p>Struktur organisasi didefinisikan sebagai “sistem yang digunakan untuk mendefinisikan 
+                                        hierarki dalam suatu organisasi. Ini mengidentifikasi setiap pekerjaan, 
+                                        fungsinya dan ke mana ia melapor ke dalam organisasi.</p>
+                                </div>
+                            </a>
+                            <a href="{{url('umkm')}}" target="_blank" rel="noopener noreferrer">
+                                <div class="s-12 m-6 l-3 margin-bottom">
+                                    <i class="icon-tablet icon3x"></i>
+                                    <h2>Data UMKM</h2>
+                                    <p>Data profil UMKM menyajikan data informasi pengusaha (nama perusahaan, lama usaha, alamat, dll) 
+                                        serta data usaha yang antara lain mencakup 
+                                        informasi kegiatan usaha, tingkat persaingan usaha.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{-- <div style="text-align: justify" class="s-6 m-6 l-3 margin-bottom">
                         <i class="icon-tablet icon3x"></i>
-                        <h2>Fully responsive</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt
-                            ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <h2>Visi</h2>
+                        <p>
+                            <li>Terwujudnya Usaha Kecil Menengah yang Maju dan Mandiri </li>
+                            <li>Transparansi administrasi menuju tata kelola desa yang baik dan efisien</li>
+                        </p>
+                    </div> --}}
+                    {{--  <div style="text-align: justify"  class="s-6 m-6 l-3 margin-bottom">
+                        <i class="icon-isight icon3x"></i>
+                        <h2>Misi</h2>
+                        <p>
+                            <li>Meningkatkan sumber daya manusia</li>
+                            <li>Menjaga ketentraman & ketertiban untuk mewujudkan desa yang aman dan makmur</li>
+                            <li>Meningkatkan partisipasi masyarakat dengan membuka komunikasi yang baik</li>
+                        </p>
                     </div>
-                    {{-- <div class="s-12 m-6 l-3 margin-bottom">
-                    <i class="icon-isight icon3x"></i>
-                    <h2>Clean design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut laoreet dolore magna aliquam erat volutpat adipiscing.</p>
-                </div>
-                <div class="s-12 m-6 l-3 margin-bottom">
-                    <i class="icon-star icon3x"></i>
-                    <h2>Valid code</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut laoreet dolore magna erat volutpat.</p>
-                </div> --}}
+
+                    <a href="{{url('struktur')}}" target="_blank" rel="noopener noreferrer">
                     <div class="s-12 m-6 l-3 margin-bottom">
-                        <i class="icon-heart icon3x"></i>
-                        <h2>Totally free</h2>
+                        <i class="icon-star icon3x"></i>
+                        <h2>Struktur Organisasi</h2>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                             tincidunt
-                            ut laoreet dolore magna aliquam erat volutpat nonummy.</p>
+                            ut laoreet dolore magna erat volutpat.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- data UMKM PDF --}}
-    <div id="first-block">
-        <div class="line">
-            <h1>Kampung Lebak Jaya 5 Utara</h1>
-            <p>Merupakan Kampung yang bersinergitas tinggi dan penerapan dalam sebuah kemajuan bersama dalam warga dan
-                untuk Indonesia.</p>
-            <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
-        </div>
-    </div>
-    {{-- struktur organisasi --}}
-    <div id="features">
-        <div class="line">
-            <div class="margin">
-                <div class="col">
-                    <div class="s-12 m-6 l-3 margin-bottom">
-                        <i class="icon-tablet icon3x"></i>
-                        <h2>Fully responsive</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt
-                            ut laoreet dolore magna aliquam erat volutpat.</p>
-                    </div>
-                    {{-- <div class="s-12 m-6 l-3 margin-bottom">
-                    <i class="icon-isight icon3x"></i>
-                    <h2>Clean design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut laoreet dolore magna aliquam erat volutpat adipiscing.</p>
-                </div>
-                <div class="s-12 m-6 l-3 margin-bottom">
-                    <i class="icon-star icon3x"></i>
-                    <h2>Valid code</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut laoreet dolore magna erat volutpat.</p>
-                </div> --}}
-                    <div class="s-12 m-6 l-3 margin-bottom">
-                        <i class="icon-heart icon3x"></i>
-                        <h2>Totally free</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt
-                            ut laoreet dolore magna aliquam erat volutpat nonummy.</p>
-                    </div>
+                    </a>
+                    <a href="{{url('umkm')}}" target="_blank" rel="noopener noreferrer">
+                        <div class="s-12 m-6 l-3 margin-bottom">
+                            <i class="icon-heart icon3x"></i>
+                            <h2>Data UMKM</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                tincidunt
+                                ut laoreet dolore magna aliquam erat volutpat nonummy.</p>
+                        </div>
+                    </a> --}}
                 </div>
             </div>
         </div>
@@ -156,11 +163,11 @@
         </div>
         <article class="s-12 m-12 l-4">
             <h2>About Us<br> Lebak Jaya 5A Utara<br></h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet
-                dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                suscipit
-                lobortis nisl ut aliquip ex ea commodo consequat.
+            <p>Website ini berisi tentang segala aspek informasi yang terdiri dari UMKM, Berita, 
+                Transparansi Keuangan, dan  Struktur Organisasi. Website ini dapat memudahkan para 
+                masyarakat untuk mengakses informasi kampung Lebak Jaya 5 A Utara serta memberi kesempatan 
+                terhadap kampung ini untuk mengenalkan jati diri kampung terhadap kalayak luar di Era 
+                Digitalisasi.
             </p>
 
             <div class="about-us-icons">
@@ -216,46 +223,28 @@
         <div class="line">
             <h2 class="section-title">Latest News</h2>
             <div class="margin">
-
+                @foreach ($data as $item)
                 <div class="s-12 m-12 l-6">
                     <div class="s-12 l-2">
                         <div class="news-date">
-                            <p class="day">28</p>
-                            <p class="month">AUGUST</p>
-                            <p class="year">2015</p>
+                            <p class="day">{{ date("d", strtotime($item->waktu)) }}</p>
+                            <p class="month">{{ date("F", strtotime($item->waktu)) }}</p>
+                            <p class="year">{{ date("Y", strtotime($item->waktu)) }}</p>
                         </div>
                     </div>
                     <div class="s-12 l-10">
                         <div class="news-text">
-                            <h4>First latest News</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
-                            </p>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <h4>{{$item->judul}}</h4>
+                            </a>
+                            <p>{!! nl2br($item->isi_thumbnail)!!}</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="s-12 m-6 l-6">
-                    <div class="s-12 l-2">
-                        <div class="news-date">
-                            <p class="day">28</p>
-                            <p class="month">AUGUST</p>
-                            <p class="year">2015</p>
-                        </div>
-                    </div>
-                    <div class="s-12 l-10">
-                        <div class="news-text">
-                            <h4>First latest News</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
                 <div class="s-12 m-6 l-12">
                     <br>
-                    <a style="position: relative;" href="news-front">More News ...</a>
+                    <a style="position: relative;" href="news_front">More News ...</a>
                 </div>
             </div>
         </div>
@@ -271,8 +260,8 @@
                 <div class="s-12 m-12 l-4 margin-bottom right-align">
                     <h3>LEBAK JAYA 5 UTARA</h3>
                     <address>
-                        <p><strong>Kecamatan:</strong> Gading</p>
-                        <p><strong>Kelurahan:</strong> Tambaksari</p>
+                        <p><strong>Kecamatan:</strong> Tambaksari</p>
+                        <p><strong>Kelurahan:</strong> Dukuh Setro</p>
                         <p><strong>Kode Pos:</strong> 60134</p>
                         <p><strong>E-mail:</strong> info@lebakjayautara@gmail.com</p>
                     </address>

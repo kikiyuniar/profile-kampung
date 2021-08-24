@@ -48,9 +48,8 @@
                 <div class="top-nav s-12 l-10">
                     <p class="nav-text"></p>
                     <ul class="right">
-                        <li class="active-item"><a href="/">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/#about-us">About Us</a></li>
-                        <!-- <li><a href="#features">Features</a></li> -->
                         <li><a href="/#services">Transparansi Keuangan</a></li>
                         <li><a href="#latest-news">News</a></li>
                         <li><a href="#contact">Contact</a></li>

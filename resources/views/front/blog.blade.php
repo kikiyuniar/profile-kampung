@@ -11,7 +11,6 @@
             <h1>News</h1>
             <p>Kampung Lebak Jaya 5 Utara Merupakan Kampung yang bersinergitas tinggi dan penerapan dalam <br>sebuah
                 kemajuan bersama dalam warga dan untuk Indonesia.</p>
-            <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
         </div>
     </div>
 
@@ -19,71 +18,75 @@
     <div id="latest-news">
         <div class="container">
             <h2 class="section-title">Latest News
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum veniam porro dicta necessitatibus
-                    atque eligendi ipsa debitis. Veritatis consectetur, eligendi reiciendis laudantium sequi possimus,
-                    doloribus maxime expedita iure quidem omnis!</p>
             </h2>
-            <div class="card" style="width: 18rem;">
-                <img src="https://noorenergi.co.id/assets_foto_post/1620772565.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="row">
+                @foreach ($data as $item)
+                {{-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
+                <div class="col-sm-12 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$item->judul}}</h5>
+                            <p class="card-text"><small class="text-muted">{{ date("l, d F Y", strtotime($item->waktu)) }}</small></p>
+                            <p class="card-text">{!! nl2br($item->isi_thumbnail)!!}</p>
+                            <a href="#" style="color: white" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="https://noorenergi.co.id/assets_foto_post/1620772565.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+                {{-- <div class="col-sm-6 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$item->judul}}</h5>
+                <p class="card-text">{!! nl2br($item->isi_thumbnail)!!}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
-
         </div>
+    </div> --}}
+    @endforeach
+    {!! $data->links('vendor.pagination.simple-tailwind') !!}
+
+    </div>
+
+    </div>
     </div>
     <!-- CONTACT -->
-    <div id="contact">
+    {{-- <div id="contact">
         <div class="line">
             <h2 class="section-title">Contact Us</h2>
             <div class="margin">
                 <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
                     <img src="{{URL::asset('front')}}/img/contact.jpg" alt="">
-                </div>
-                <div class="s-12 m-12 l-4 margin-bottom right-align">
-                    <h3>LEBAK JAYA 5 UTARA</h3>
-                    <address>
-                        <p><strong>Kecamatan:</strong> Gading</p>
-                        <p><strong>Kelurahan:</strong> Tambaksari</p>
-                        <p><strong>Kode Pos:</strong> 60134</p>
-                        <p><strong>E-mail:</strong> info@lebakjayautara@gmail.com</p>
-                    </address>
-                    <br />
-                    <h3>Social</h3>
-                    <p><i class="icon-facebook icon"></i> <a
-                            href="https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091">lebakjaya5utara</a>
-                    </p>
-                    <p><i class="icon-twitter icon"></i> <a
-                            href="https://www.facebook.com/myresponsee">lebakjaya5utara</a></p>
-                    <p class="margin-bottom"><i class="icon-instagram icon"></i> <a
-                            href="https://twitter.com/MyResponsee">lebakjaya5utara</a></p>
-                </div>
-                <div class="s-12 m-12 l-5">
-                    <h3>Contact form</h3>
-                    <form class="customform" action="">
-                        <div class="s-12"><input name="" placeholder="Your e-mail" title="Your e-mail" type="text" />
-                        </div>
-                        <div class="s-12"><input name="" placeholder="Your name" title="Your name" type="text" /></div>
-                        <div class="s-12"><textarea placeholder="Your massage" name="" rows="5"></textarea></div>
-                        <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
+    <div class="s-12 m-12 l-4 margin-bottom right-align">
+        <h3>LEBAK JAYA 5 UTARA</h3>
+        <address>
+            <p><strong>Kecamatan:</strong> Gading</p>
+            <p><strong>Kelurahan:</strong> Tambaksari</p>
+            <p><strong>Kode Pos:</strong> 60134</p>
+            <p><strong>E-mail:</strong> info@lebakjayautara@gmail.com</p>
+        </address>
+        <br />
+        <h3>Social</h3>
+        <p><i class="icon-facebook icon"></i> <a
+                href="https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091">lebakjaya5utara</a>
+        </p>
+        <p><i class="icon-twitter icon"></i> <a href="https://www.facebook.com/myresponsee">lebakjaya5utara</a></p>
+        <p class="margin-bottom"><i class="icon-instagram icon"></i> <a
+                href="https://twitter.com/MyResponsee">lebakjaya5utara</a></p>
+    </div>
+    <div class="s-12 m-12 l-5">
+        <h3>Contact form</h3>
+        <form class="customform" action="">
+            <div class="s-12"><input name="" placeholder="Your e-mail" title="Your e-mail" type="text" />
+            </div>
+            <div class="s-12"><input name="" placeholder="Your name" title="Your name" type="text" /></div>
+            <div class="s-12"><textarea placeholder="Your massage" name="" rows="5"></textarea></div>
+            <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div> --}}
     <!-- MAP -->
     <div id="map-block">
         <iframe

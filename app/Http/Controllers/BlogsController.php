@@ -33,15 +33,20 @@ class BlogsController extends Controller
 
     public function action_edit_news(Request $request)
     {
-        $slug_judul = str_replace(" ", "-", $request->judul);
+        // $slug_judul = str_replace(" ", "-", $request->judul);
+        // DB::table('blogs')->where('id', $request->id)
+        //     ->update([
+        //         'judul' => $request->input('judul'),
+        //         'slug'   => $slug_judul,
+        //         'isi_thumbnail' => $request->input('isi_thumbnail'),
+        //         'isi'   => $request->input('isi'),
+
+        //     ]);
         DB::table('blogs')->where('id', $request->id)
             ->update([
-                'judul' => $request->input('judul'),
-                'slug'   => $slug_judul,
-                'waktu'       => $request->input('waktu'),
-                'isi_thumbnail' => $request->input('isi_thumbnail'),
-                'isi'   => $request->input('isi'),
-
+                'judul'    => $request->judul,
+                'isi'           => $request->isi,
+                'isi_thumbnail' => $request->isi_thumbnail
             ]);
 
         return redirect()->back()->with('success', 'News Berhasil Diperbaruhi');
@@ -58,10 +63,10 @@ class BlogsController extends Controller
 
         return view('admin.edit-news', ['data' => $detail]);
     }
-    // public function view_edit_news(Request $request)
-    // {
-    //     $detail = DB::table('blogs')->where('id', $request->id)->get();
 
-    //     return view('admin.edit-news', ['data' => $detail]);
-    // }
+    public function news_front()
+    {
+        $detail = DB::table('blogs')->orderBy('id', 'desc')->paginate(4);
+        return view('front.blog', ['data' => $detail]);
+    }
 }

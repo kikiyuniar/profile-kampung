@@ -24,7 +24,8 @@
                                         aria-label="Close"></button>
                                 </div>
                                 @endif
-                                @foreach ($data as $item)                                    
+                                @foreach ($data as $item)     
+                                <input type="text" name="id" value="{{$item->id}}" hidden>                               
                                 <div class="form-floating mb-3">
                                     <input type="text" name="judul" class="form-control" placeholder="judul_news" value="{{$item->judul}}" required>
                                     <label>Judul</label>

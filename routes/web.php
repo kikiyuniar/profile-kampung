@@ -6,7 +6,7 @@ use App\Http\Controllers\InputController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BlogsController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +18,21 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('front/home');
+// Route::get('/', function () {
+//     return view('front/home');
+// });
+Route::get('/', [Controller::class, 'home']);
+
+// Route::get('/news-front', function () {
+//     return view('front/blog');
+// });
+Route::get('/news_front', [BlogsController::class, 'news_front']);
+
+Route::get('/struktur', function () {
+    return view('front/struktur');
 });
-Route::get('/news-front', function () {
-    return view('front/blog');
+Route::get('/umkm', function () {
+    return view('front/umkm');
 });
 Route::get('/download', [NewsController::class, 'view_download']);
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
@@ -46,13 +56,13 @@ Route::group(
         Route::get('transparan', [InputController::class, 'index']);
         Route::post('update_transparan', [InputController::class, 'update_transparant']);
 
+        Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
         Route::get('news', [BlogsController::class, 'index']);
         Route::post('add_news', [BlogsController::class, 'add_news']);
         Route::get('list_news', [BlogsController::class, 'list']);
         Route::get('/del/{id}', [BlogsController::class, 'del']);
         Route::get('/{slug}', [BlogsController::class, 'detail']);
         Route::get('view_edit_news', [BlogsController::class, 'view_edit_news']);
-        Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
         // Route::post('/contact', [ContactController::class, 'sendMail']);
 
         // Route::get('/contact', 'Contact@showContactForm');

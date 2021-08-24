@@ -29,7 +29,7 @@
                                     <label>Judul</label>
                                 </div>
                                 <input type="text" name="slug" hidden>
-                                <label>Isi Thumbnail</label>
+                                <label class="mb-2">Isi Thumbnail ( Max 200 kata)</label>
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" placeholder="Isi thumbnail Berita" rows="3"
                                         name="isi_thumbnail" required></textarea>
@@ -37,7 +37,7 @@
                                         CKEDITOR.replace('isi_thumbnail');
                                     </script>
                                 </div>
-                                <label>Isi</label>
+                                <label class="mb-2">Isi</label>
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" placeholder="Isi Berita" rows="3"
                                         name="isi" required></textarea>
