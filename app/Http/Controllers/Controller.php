@@ -26,7 +26,7 @@ class Controller extends BaseController
     // }
     public function home()
     {
-        $detail = DB::table('views_two_blog')->get();
+        $detail = DB::table('blogs')->orderByDesc('id')->limit('2')->get();
 
         return view('front.home', ['data' => $detail]);
     }
