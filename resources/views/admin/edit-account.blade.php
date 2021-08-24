@@ -47,7 +47,7 @@
                                         value="{{$item->password}}">
                                     <input type="checkbox" class="form-checkbox"> Show password
                                 </div>
-                                <button type="submit" class="btn btn-lg btn-primary">Signup</button>
+                                <button type="submit" class="btn btn-lg btn-primary">Update</button>
                             </form>
                             @endforeach
                         </div>
