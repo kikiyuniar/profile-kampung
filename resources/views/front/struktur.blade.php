@@ -17,6 +17,21 @@
     <!-- LATEST NEWS -->
     <div id="latest-news">
         <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-5">
+                        @foreach ($data as $item)
+
+                        <div class="shadow card-body">
+                            <img style="display:block;margin-left: auto;margin-right: auto;"
+                                src="{{asset('/dashboard/img_post/'.$item->foto)}}" class="img-fluid rounded"
+                                alt="Responsive image">
+                        </div>
+
+                        @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

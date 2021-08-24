@@ -172,7 +172,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{{url('struktur')}}" data-href="Pages.Blog.html">
+                                    <a href="{{url('view_struktur')}}" data-href="Pages.Blog.html">
                                         <span class="label">Struktur Organisasi</span>
                                     </a>
                                 </li>

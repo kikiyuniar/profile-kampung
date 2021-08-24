@@ -1,7 +1,6 @@
 @extends('master_admin.core')
 @section('title','Dashboard')
 @section('container2')
-<link rel="stylesheet" href="{{URL::asset('front')}}/css/drop-file.css">
 <main>
     <div class="container">
         <div class="row">
@@ -13,7 +12,8 @@
                 </section>
                 <section class="scroll-section" id="floatingLabel">
                     <h2 class="small-title"></h2>
-                    <div class="card mb-5">
+                    
+                    {{-- <div class="card mb-5">
                         <div class="card-body">
                             <form action="/post_struktur" method="post" enctype="multipart/form-data">
                                 @csrf
@@ -32,13 +32,15 @@
                                 <button class="btn btn-primary" type="submit">Submit</button>
                             </form>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="card mb-5">
+                        
                         <div class="card-body">
                             <section class="scroll-section" id="responsive">
                                 <h2 class="small-title">Responsive</h2>
                                 <div class="row">
                                     <div class="col">
+                                        <button class="btn btn-info" type="submit">Update</button>
                                         <div class="card mb-5">
                                             @foreach ($data as $item)
                                                 

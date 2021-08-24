@@ -30,10 +30,11 @@ Route::get('/', [Controller::class, 'home']);
 //     return view('front/blog');
 // });
 Route::get('/news_front', [BlogsController::class, 'news_front']);
+Route::get('/struktur_org', [StrukturController::class, 'struktur_front']);
 
-Route::get('/struktur', function () {
-    return view('front/struktur');
-});
+// Route::get('/struktur_org', function () {
+//     return view('front/struktur');
+// });
 Route::get('/umkm', function () {
     return view('front/umkm');
 });
@@ -70,8 +71,9 @@ Route::group(
 
         Route::post('add_contact', [ContactController::class, 'add_contact']);
         Route::get('/del/{id}', [ContactController::class, 'del']);
-        Route::post('update_struktur', [StrukturController::class, 'update_struktur']);
-        Route::get('struktur', [StrukturController::class, 'index']);
+        // Route::post('update_struktur', [StrukturController::class, 'update_struktur']);
+        Route::post('post_struktur', [StrukturController::class, 'post_struktur']);
+        Route::get('view_struktur', [StrukturController::class, 'index']);
         // Route::post('/contact', [ContactController::class, 'sendMail']);
 
         // Route::get('/contact', 'Contact@showContactForm');

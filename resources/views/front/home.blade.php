@@ -96,7 +96,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 offset-md-4">
-                            <a href="{{url('struktur')}}" target="_blank" rel="noopener noreferrer">
+                            <a href="{{url('struktur_org')}}" target="_blank" rel="noopener noreferrer">
                                 <div class="s-12 m-6 l-3 margin-bottom">
                                     <i class="icon-tablet icon3x"></i>
                                     <h2>Struktur Organisasi</h2>
