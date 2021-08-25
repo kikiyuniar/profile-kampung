@@ -37,6 +37,49 @@
         }
 
     </style>
+    <style>
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 54px;
+            height: 54px;
+            z-index: 9999;
+            cursor: pointer;
+            text-decoration: none;
+            transition: opacity 0.2s ease-out;
+            opacity: 0.5;
+            background-image: url(top.png);
+        }
+        .back-to-top:hover{
+            opacity: 0.7;
+        }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+	
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function(){
+
+                // Show button after 100px
+                var showAfter = 100;
+                if ($(this).scrollTop() > showAfter) {                 
+                    $('.back-to-top').fadeIn();
+                } else {   
+                    $('.back-to-top').fadeOut();
+                }
+            });
+            
+            //Click event to scroll to top
+            $('.back-to-top').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+            
+        });
+        </script>
 </head>
 
 <body class="size-1140">
@@ -114,6 +157,7 @@
                     Workplaceme</a>
             </div>
         </div>
+        <a href="#" class="back-to-top"></a>
     </footer>
     <script type="text/javascript" src="{{URL::asset('front')}}/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript">
