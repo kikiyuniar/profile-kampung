@@ -142,7 +142,7 @@
                         </li>
 
                         <li>
-                            <a href="{{url('list_news')}}" data-href="Pages.html">
+                            <a href="{{url('listnews')}}" data-href="Pages.html">
                                 <i data-cs-icon="screen" class="icon" data-cs-size="18"></i>
                                 <span class="label">News</span>
                             </a>
