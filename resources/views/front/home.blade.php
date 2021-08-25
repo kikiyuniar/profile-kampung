@@ -9,17 +9,6 @@
                 <img src="{{URL::asset('front')}}/img/2.jpg" alt="">
                 <div class="line">
                     <div class="text hide-s">
-                        {{-- <div class="line">
-                            <div class="prev-arrow hide-s hide-m">
-                                <i class="icon-chevron_left"></i>
-                            </div>
-                            <div class="next-arrow hide-s hide-m">
-                                <i class="icon-chevron_right"></i>
-                            </div>
-                        </div> --}}
-                        {{-- <h2>Free Onepage Responsive Template</h2> --}}
-                        {{-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna.</p> --}}
                     </div>
                 </div>
             </div>
@@ -27,17 +16,6 @@
                 <img src="{{URL::asset('front')}}/img/1.jpg" alt="">
                 <div class="line">
                     <div class="text hide-s">
-                        {{-- <div class="line">
-                            <div class="prev-arrow hide-s hide-m">
-                                <i class="icon-chevron_left"></i>
-                            </div>
-                            <div class="next-arrow hide-s hide-m">
-                                <i class="icon-chevron_right"></i>
-                            </div>
-                        </div> --}}
-                        {{-- <h2>Fully Responsive Components</h2> --}}
-                        {{-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna.</p> --}}
                     </div>
                 </div>
             </div>
@@ -45,17 +23,6 @@
                 <img src="{{URL::asset('front')}}/img/3.jpg" alt="">
                 <div class="line">
                     <div class="text hide-s">
-                        {{-- <div class="line">
-                            <div class="prev-arrow hide-s hide-m">
-                                <i class="icon-chevron_left"></i>
-                            </div>
-                            <div class="next-arrow hide-s hide-m">
-                                <i class="icon-chevron_right"></i>
-                            </div>
-                        </div> --}}
-                        {{-- <h2>Build new Layout in 10 minutes!</h2> --}}
-                        {{-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna.</p> --}}
                     </div>
                 </div>
             </div>
@@ -100,26 +67,28 @@
                                 <div class="s-12 m-6 l-3 margin-bottom">
                                     <i class="icon-tablet icon3x"></i>
                                     <h2>Struktur Organisasi</h2>
-                                    <p>Struktur organisasi didefinisikan sebagai “sistem yang digunakan untuk mendefinisikan 
-                                        hierarki dalam suatu organisasi. Ini mengidentifikasi setiap pekerjaan, 
+                                    <p>Struktur organisasi didefinisikan sebagai “sistem yang digunakan untuk
+                                        mendefinisikan
+                                        hierarki dalam suatu organisasi. Ini mengidentifikasi setiap pekerjaan,
                                         fungsinya dan ke mana ia melapor ke dalam organisasi.</p>
+                                    </div>
+                                </a>
+                                <a href="{{url('umkm')}}" target="_blank" rel="noopener noreferrer">
+                                    <div class="s-12 m-6 l-3 margin-bottom">
+                                        <i class="icon-tablet icon3x"></i>
+                                        <h2>Data UMKM</h2>
+                                        <p>Data profil UMKM menyajikan data informasi pengusaha (nama perusahaan, lama
+                                            usaha, alamat, dll)
+                                            serta data usaha yang antara lain mencakup
+                                            informasi kegiatan usaha, tingkat persaingan usaha.</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a href="{{url('umkm')}}" target="_blank" rel="noopener noreferrer">
-                                <div class="s-12 m-6 l-3 margin-bottom">
-                                    <i class="icon-tablet icon3x"></i>
-                                    <h2>Data UMKM</h2>
-                                    <p>Data profil UMKM menyajikan data informasi pengusaha (nama perusahaan, lama usaha, alamat, dll) 
-                                        serta data usaha yang antara lain mencakup 
-                                        informasi kegiatan usaha, tingkat persaingan usaha.</p>
-                                </div>
-                            </a>
+                            </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
     <!-- ABOUT US -->
     <div id="about-us">
         <div class="s-12 m-12 l-8 media-container">
@@ -127,10 +96,10 @@
         </div>
         <article class="s-12 m-12 l-4">
             <h2>About Us<br> Lebak Jaya 5A Utara<br></h2>
-            <p>Website ini berisi tentang segala aspek informasi yang terdiri dari UMKM, Berita, 
-                Transparansi Keuangan, dan  Struktur Organisasi. Website ini dapat memudahkan para 
-                masyarakat untuk mengakses informasi kampung Lebak Jaya 5 A Utara serta memberi kesempatan 
-                terhadap kampung ini untuk mengenalkan jati diri kampung terhadap kalayak luar di Era 
+            <p>Website ini berisi tentang segala aspek informasi yang terdiri dari UMKM, Berita,
+                Transparansi Keuangan, dan Struktur Organisasi. Website ini dapat memudahkan para
+                masyarakat untuk mengakses informasi kampung Lebak Jaya 5 A Utara serta memberi kesempatan
+                terhadap kampung ini untuk mengenalkan jati diri kampung terhadap kalayak luar di Era
                 Digitalisasi.
             </p>
 
@@ -243,22 +212,24 @@
                     <h3>Contact form</h3>
                     <form class="customform" action="{{('add_contact')}}" method="POST">
                         @csrf
-                                @if(session('errors'))
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                    Something it's wrong:                                    
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                @endif
-                        <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your e-mail"
-                                type="text" />
+                        @if(session('errors'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            Something it's wrong:
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text" />
+                        @endif
+                        <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your e-mail" type="text"
+                                required />
                         </div>
-                        <div class="s-12"><textarea placeholder="Your massage" name="pesan" rows="5"></textarea></div>
+                        <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text"
+                                required />
+                        </div>
+                        <div class="s-12"><textarea placeholder="Your massage" name="pesan" rows="5"
+                                required></textarea></div>
                         <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
                     </form>
                 </div>

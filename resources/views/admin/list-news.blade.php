@@ -69,7 +69,7 @@
                                     </svg>
                                     Detail
                                 </a>
-                                <a class="btn btn-outline-danger mb-1" href="del/{{ $item->id}}">
+                                <a class="btn btn-outline-danger mb-1" href="hapus/{{$item->id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash" viewBox="0 0 16 16">
                                         <path

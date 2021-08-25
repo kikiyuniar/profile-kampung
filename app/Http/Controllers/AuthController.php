@@ -103,6 +103,12 @@ class AuthController extends Controller
         return view('admin.list-news', ['data_news' => $news]);
     }
 
+    public function del_news(Request $request)
+    {
+        DB::table('blogs')->where('id', '=', $request->id)->delete();
+        return redirect()->back()->with('danger', 'Berhasil di hapus');
+    }
+
     public function delete(Request $request)
     {
         DB::table('users')->where('id', '=', $request->id)->delete();

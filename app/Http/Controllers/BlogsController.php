@@ -29,7 +29,7 @@ class BlogsController extends Controller
                 'isi_thumbnail' => $request->isi_thumbnail,
                 'isi'           => $request->isi
             ]);
-        return redirect('/list_news')->with('success', 'Berhasil Di Tambahkan');
+        return redirect('/listnews')->with('success', 'Berhasil Di Tambahkan');
     }
 
     public function action_edit_news(Request $request)
@@ -54,11 +54,11 @@ class BlogsController extends Controller
     }
 
 
-    public function delete(Request $request)
-    {
-        DB::table('blogs')->where('id', '=', $request->id)->delete();
-        return redirect()->back()->with('danger', 'Berhasil Di Hapus');
-    }
+    // public function delete(Request $request)
+    // {
+    //     DB::table('blogs')->where('id', '=', $request->id)->delete();
+    //     return redirect()->back()->with('danger', 'Berhasil Di Hapus');
+    // }
     public function detail(Request $request)
     {
         $detail = DB::table('blogs')->where('id', $request->id)->get();

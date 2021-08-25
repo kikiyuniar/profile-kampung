@@ -29,7 +29,7 @@
                         </div>
                         <div class="row">
                             <div class="col-10">
-                                <a href="{{url('list_news')}}" class="heading stretched-link d-block">News</a>
+                                <a href="{{url('listnews')}}" class="heading stretched-link d-block">News</a>
                                 <div class="text-muted">Count News.</div>
                             </div>
                             <div class="col-2">

@@ -48,6 +48,7 @@ Route::group(
         Route::get('list_account', [AuthController::class, 'list']);
         Route::get('/delete/{id}', [AuthController::class, 'delete']);
         Route::get('/listnews', [AuthController::class, 'list_news_admin']);
+        Route::get('hapus/{id}', [AuthController::class, 'del_news']);
 
         Route::get('/edit/{id}', [AuthController::class, 'show_edit_account']);
         Route::post('action_edit_account', [AuthController::class, 'action_edit_account']);
@@ -61,8 +62,6 @@ Route::group(
         Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
         Route::get('news', [BlogsController::class, 'index']);
         Route::post('add_news', [BlogsController::class, 'add_news']);
-        Route::get('/del/{id}', [BlogsController::class, 'delete']);
-        // Route::get('list_news', [BlogsController::class, 'list']);
         Route::get('/{id}', [BlogsController::class, 'detail']);
         Route::get('view_edit_news', [BlogsController::class, 'view_edit_news']);
 
