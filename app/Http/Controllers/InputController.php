@@ -21,6 +21,7 @@ class InputController extends Controller
         DB::table('transparan')->where('id', $request->id)
             ->update([
                 'judul' => $request->input('judul'),
+                'embed' => $request->input('embed'),
                 'isi'   => $request->input('isi')
             ]);
 

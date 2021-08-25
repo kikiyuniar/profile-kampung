@@ -28,6 +28,10 @@
                                     <input type="judul" name="judul" class="form-control" placeholder="judul" value="{{$tampilkan->judul}}">
                                     <label>Judul</label>
                                 </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="embed" class="form-control" placeholder="embed" value="{{$tampilkan->embed}}">
+                                    <label>Embed</label>
+                                </div>
                                 <label> Address</label>
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" placeholder="Address" rows="3" name="isi">{{$tampilkan->isi}}</textarea>
