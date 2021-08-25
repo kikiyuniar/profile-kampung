@@ -20,6 +20,14 @@ class StrukturController extends Controller
             'data' => $data
         ]);
     }
+    public function struktur_front()
+    {
+        $data = DB::table('struktur')->get();
+
+        return view('front.struktur', [
+            'data' => $data
+        ]);
+    }
     // public function update_struktur(Request $request)
     // {
     //     if ($request->file('foto')) {
