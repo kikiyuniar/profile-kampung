@@ -12,19 +12,11 @@ use Illuminate\Support\Facades\Storage;
 
 class StrukturController extends Controller
 {
-    public function index()
+    public function add_struktur()
     {
         $data = DB::table('struktur')->get();
 
-        return view('admin.struktur', [
-            'data' => $data
-        ]);
-    }
-    public function struktur_front()
-    {
-        $data = DB::table('struktur')->get();
-
-        return view('front.struktur', [
+        return view('admin.add-struktur', [
             'data' => $data
         ]);
     }
@@ -85,5 +77,4 @@ class StrukturController extends Controller
 
     //     return redirect('/avatars');
     // }
-
 }

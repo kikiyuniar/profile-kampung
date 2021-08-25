@@ -21,14 +21,7 @@ use App\Http\Controllers\StrukturController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('front/home');
-// });
 Route::get('/', [Controller::class, 'home']);
-
-// Route::get('/news-front', function () {
-//     return view('front/blog');
-// });
 Route::get('/news_front', [BlogsController::class, 'news_front']);
 Route::get('/struktur_org', [StrukturController::class, 'struktur_front']);
 
@@ -60,6 +53,7 @@ Route::group(
 
         Route::get('transparan', [InputController::class, 'index']);
         Route::post('update_transparan', [InputController::class, 'update_transparant']);
+        Route::get('view_struktur', [StrukturController::class, 'add_struktur']);
 
         Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
         Route::get('news', [BlogsController::class, 'index']);
@@ -71,9 +65,8 @@ Route::group(
 
         Route::post('add_contact', [ContactController::class, 'add_contact']);
         Route::get('/del/{id}', [ContactController::class, 'del']);
-        // Route::post('update_struktur', [StrukturController::class, 'update_struktur']);
         Route::post('post_struktur', [StrukturController::class, 'post_struktur']);
-        Route::get('view_struktur', [StrukturController::class, 'index']);
+
         // Route::post('/contact', [ContactController::class, 'sendMail']);
 
         // Route::get('/contact', 'Contact@showContactForm');
