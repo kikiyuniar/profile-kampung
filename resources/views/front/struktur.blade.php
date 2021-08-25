@@ -24,7 +24,7 @@
 
                         <div class="shadow card-body">
                             <img style="display:block;margin-left: auto;margin-right: auto;"
-                                src="{{asset('img_post'.$item->foto)}}" class="img-fluid rounded"
+                                src="{{asset('/img_post/'.$item->foto)}}" class="img-fluid rounded"
                                 alt="Responsive image">
                         </div>
 
