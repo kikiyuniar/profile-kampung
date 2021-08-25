@@ -1,6 +1,7 @@
 @extends('master_front.core')
 @section('title','Lebak Jaya 5A Utara')
 @section('container')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <section>
     <!-- CAROUSEL -->
     <div id="carousel">
@@ -197,13 +198,13 @@
                     </address>
                     <br />
                     <h3>Social</h3>
-                    <p><i class="icon-facebook icon"></i> <a
-                            href="https://www.facebook.com/pages/Vision-Design-graphic-ZOO/154664684553091">lebakjaya5utara</a>
+                    <p><i class="fab fa-youtube"></i> <a
+                            href="https://www.youtube.com/channel/UCL-9Y5CYeiMmB5dvjzr7RpQ">btv tambaksari04</a>
                     </p>
-                    <p><i class="icon-twitter icon"></i> <a
-                            href="https://www.facebook.com/myresponsee">lebakjaya5utara</a></p>
-                    <p class="margin-bottom"><i class="icon-instagram icon"></i> <a
-                            href="https://twitter.com/MyResponsee">lebakjaya5utara</a></p>
+                    <p><i class="fab fa-instagram"></i> <a
+                            href="https://instagram.com/kkn_tambaksari_4?utm_medium=copy_link">kkn_tambaksari_4</a></p>
+                    <p class="margin-bottom"><i class="fab fa-whatsapp"></i> <a
+                            href="https://api.whatsapp.com/send/?phone=62881026187475">(+62)8810-2618-7475</a></p>
                 </div>
                 <div class="s-12 m-12 l-5">
                     <h3>Contact form</h3>

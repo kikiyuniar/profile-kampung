@@ -12,6 +12,7 @@
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="{{URL::asset('front')}}/css/template-style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script type="text/javascript" src="{{URL::asset('front')}}/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="{{URL::asset('front')}}/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{URL::asset('front')}}/js/modernizr.js"></script>
@@ -91,7 +92,13 @@
                 </div>
                 <div class="s-12 m-6 l-6">
                     <div class="social right">
-                        <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-instagram_circle"></i></a> | <a href="{{ url('/login') }}" target="_blank"><i class="icon-signin"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=62881026187475" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/channel/UCL-9Y5CYeiMmB5dvjzr7RpQ" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/kkn_tambaksari_4?utm_medium=copy_link" target="_blank"><i
+                                class="fab fa-instagram"></i></a> |
+                        <a href="login" target="_blank"><i class="icon-signin"></i></a>
                     </div>
                 </div>
             </div>

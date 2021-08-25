@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{URL::asset('front')}}/css/template-style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script type="text/javascript" src="{{URL::asset('front')}}/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="{{URL::asset('front')}}/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{URL::asset('front')}}/js/modernizr.js"></script>
@@ -51,35 +52,39 @@
             opacity: 0.5;
             background-image: url(top.png);
         }
-        .back-to-top:hover{
+
+        .back-to-top:hover {
             opacity: 0.7;
         }
 
-        </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-	
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
             //Check to see if the window is top if not then display button
-            $(window).scroll(function(){
+            $(window).scroll(function () {
 
                 // Show button after 100px
                 var showAfter = 100;
-                if ($(this).scrollTop() > showAfter) {                 
+                if ($(this).scrollTop() > showAfter) {
                     $('.back-to-top').fadeIn();
-                } else {   
+                } else {
                     $('.back-to-top').fadeOut();
                 }
             });
-            
+
             //Click event to scroll to top
-            $('.back-to-top').click(function(){
-                $('html, body').animate({scrollTop : 0},800);
+            $('.back-to-top').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 800);
                 return false;
             });
-            
+
         });
-        </script>
+
+    </script>
 </head>
 
 <body class="size-1140">
@@ -93,12 +98,12 @@
                 </div>
                 <div class="s-12 m-6 l-6">
                     <div class="social right">
-                        <a href="https://api.whatsapp.com/send/?phone=6281382868265" target="_blank"><i
-                                class="icon-facebook_circle"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=62881026187475" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
                         <a href="https://youtube.com/channel/UCL-9Y5CYeiMmB5dvjzr7RpQ" target="_blank"><i
-                                class="icon-twitter_circle"></i></a>
+                                class="fab fa-youtube"></i></a>
                         <a href="https://instagram.com/kkn_tambaksari_4?utm_medium=copy_link" target="_blank"><i
-                                class="icon-instagram_circle"></i></a> |
+                                class="fab fa-instagram"></i></a> |
                         <a href="login" target="_blank"><i class="icon-signin"></i></a>
                     </div>
                 </div>
@@ -136,17 +141,18 @@
                 echo "<p>Copyright " . $tgl . " Workplaceme Design - graphic</p>";
                 ?>
                 <p style="color: #6c7c84">Supported by :</p>
-                
+
                 <div class="line">
                     <div class="s-12 m-6 l-6">
                         <div style="margin-top: 10px">
                             <ul class="inlineList">
-                                <li style="margin-right: 10px;"><img  src="{{URL::asset('front')}}/img/logo-2.png" alt="..."
+                                <li style="margin-right: 10px;"><img src="{{URL::asset('front')}}/img/logo-2.png"
+                                        alt="..." class="img-responsive"></li>
+                                <li style="margin-right: 10px;"><img src="{{URL::asset('front')}}/img/kkn-um.png"
+                                        alt="..." class="img-responsive"></li>
+                                <li style="margin-right: 10px;"><img
+                                        src="{{URL::asset('front')}}/img/kkn-tambaksari.png" alt="..."
                                         class="img-responsive"></li>
-                                <li style="margin-right: 10px;"><img  src="{{URL::asset('front')}}/img/kkn-um.png"
-                                        alt="..." class="img-responsive"></li>
-                                <li style="margin-right: 10px;"><img  src="{{URL::asset('front')}}/img/kkn-tambaksari.png"
-                                        alt="..." class="img-responsive"></li>
                             </ul>
                         </div>
                     </div>
