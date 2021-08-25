@@ -14,7 +14,7 @@ class StrukturController extends Controller
 {
     public function add_struktur()
     {
-        $data = DB::table('struktur')->get();
+        $data = DB::table('struktur')->orderByDesc('id')->limit('1')->get();
 
         return view('admin.add-struktur', [
             'data' => $data
@@ -22,7 +22,7 @@ class StrukturController extends Controller
     }
     public function struktur_front()
     {
-        $data = DB::table('struktur')->get();
+        $data = DB::table('struktur')->orderByDesc('id')->limit('1')->get();
 
         return view('front.struktur', [
             'data' => $data
