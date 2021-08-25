@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\StrukturController;
+use App\Http\Controllers\UmkmComtroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,14 @@ use App\Http\Controllers\StrukturController;
 Route::get('/', [Controller::class, 'home']);
 Route::get('/news_front', [BlogsController::class, 'news_front']);
 Route::get('/struktur_org', [StrukturController::class, 'struktur_front']);
+Route::get('/umkm', [UmkmComtroller::class, 'umkm_front']);
 
 // Route::get('/struktur_org', function () {
 //     return view('front/struktur');
 // });
-Route::get('/umkm', function () {
-    return view('front/umkm');
-});
+// Route::get('/umkm', function () {
+//     return view('front/umkm');
+// });
 Route::get('/download', [NewsController::class, 'view_download']);
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login'])->name('login');
@@ -54,6 +56,7 @@ Route::group(
         Route::get('transparan', [InputController::class, 'index']);
         Route::post('update_transparan', [InputController::class, 'update_transparant']);
         Route::get('view_struktur', [StrukturController::class, 'add_struktur']);
+        Route::get('view_umkm', [UmkmComtroller::class, 'add_umkm']);
 
         Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
         Route::get('news', [BlogsController::class, 'index']);
@@ -66,10 +69,6 @@ Route::group(
         Route::post('add_contact', [ContactController::class, 'add_contact']);
         Route::get('/del/{id}', [ContactController::class, 'del']);
         Route::post('post_struktur', [StrukturController::class, 'post_struktur']);
-
-        // Route::post('/contact', [ContactController::class, 'sendMail']);
-
-        // Route::get('/contact', 'Contact@showContactForm');
-        // Route::post('/contact', 'ContactController@sendMail');
+        Route::post('post_umkm', [UmkmComtroller::class, 'post_umkm']);
     }
 );

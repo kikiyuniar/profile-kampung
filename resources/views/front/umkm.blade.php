@@ -17,6 +17,25 @@
     <!-- LATEST NEWS -->
     <div id="latest-news">
         <div class="container">
+            <div class="row">
+                @foreach ($data as $item)
+                <h3>{{$item->judul}}</h3>
+                <div class="col-4">
+                    <div class="">
+
+                        <div class="card-body">
+                            <img style="width: 100%;"
+                                src="{{asset('/img_umkm/'.$item->foto)}}" class="img-fluid rounded mb-5"
+                                alt="Responsive image">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        {!! nl2br($item->keterangan)!!}
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
 </section>

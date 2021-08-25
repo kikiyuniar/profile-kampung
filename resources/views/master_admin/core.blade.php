@@ -177,6 +177,11 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="{{url('view_umkm')}}" data-href="Pages.Blog.html">
+                                        <span class="label">Add UMKM</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{url('/list_contact')}}" data-href="Pages.Blog.html">
                                         <span class="label">Contacts</span>
                                     </a>
