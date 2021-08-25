@@ -1,5 +1,5 @@
 @extends('master_front.core')
-@section('title','Lebak Jaya 5 Utara')
+@section('title','Lebak Jaya 5A Utara')
 @section('container')
 <section>
     <!-- CAROUSEL -->
@@ -31,7 +31,7 @@
     <!-- FIRST BLOCK -->
     <div id="first-block">
         <div class="line">
-            <h1>Kampung Lebak Jaya 5 Utara</h1>
+            <h1>Kampung Lebak Jaya 5A Utara</h1>
             <p>Merupakan Kampung yang bersinergitas tinggi dan penerapan dalam sebuah kemajuan bersama dalam warga dan
                 untuk Indonesia.</p>
             <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
@@ -116,25 +116,22 @@
                 <div class="s-12 m-6 l-4 margin-bottom">
                     <i class="icon-vector"></i>
                     <div class="service-text">
-                        <h3>Khas Kampung</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <h3>Kas Kampung</h3>
+                        <p>Kas Kampung adalah tempat menyimpan uang Pemerintah Kampung yang menampung seluruh penerimaan Kampung dan digunakan untuk membayar seluruh penerimaan Kampung dan digunakan untuk membayar seluruh pengeluaran Kampung.</p>
                     </div>
                 </div>
                 <div class="s-12 m-6 l-4 margin-bottom">
                     <i class="icon-eye"></i>
                     <div class="service-text">
                         <h3>Pendapatan Perbulan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <p>Pendapatan adalah semua pemerintah Kampung dalam 1 (satu) tahun anggaran yang menjadi hak Kampung dan tidak perlu dikembalikan oleh Kampung.</p>
                     </div>
                 </div>
                 <div class="s-12 m-12 l-4 margin-bottom">
                     <i class="icon-random"></i>
                     <div class="service-text">
                         <h3>Pengeluaran Perbulan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <p>Pengeluaran Kampung adalah uang yang keluar dari rekening kas Kampung.</p>
                     </div>
                 </div>
             </div>
@@ -230,7 +227,7 @@
                         </div>
                         <div class="s-12"><textarea placeholder="Your massage" name="pesan" rows="5"
                                 required></textarea></div>
-                        <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit Button</button></div>
+                        <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">Submit</button></div>
                     </form>
                 </div>
             </div>
