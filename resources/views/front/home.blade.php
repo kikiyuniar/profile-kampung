@@ -1,7 +1,7 @@
 @extends('master_front.core')
 @section('title','Lebak Jaya 5A Utara')
 @section('container')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <section>
     <!-- CAROUSEL -->
     <div id="carousel">
@@ -194,7 +194,7 @@
                         <p><strong>Kecamatan:</strong> Tambaksari</p>
                         <p><strong>Kelurahan:</strong> Dukuh Setro</p>
                         <p><strong>Kode Pos:</strong> 60134</p>
-                        <p><strong>E-mail:</strong> info@lebakjayautara@gmail.com</p>
+                        <p><strong>E-mail:</strong><a href="mailto:lebakjayau@gmail.com"> lebakjayau@gmail.com</p></a>
                     </address>
                     <br />
                     <h3>Social</h3>
