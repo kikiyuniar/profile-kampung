@@ -52,7 +52,7 @@ class StrukturController extends Controller
     public function post_struktur(Request $request)
     {
         $imageName = time() . '.' . $request->foto->extension();
-        $request->foto->move(public_path('dashboard\img_post'), $imageName);
+        $request->foto->move(public_path('img_post'), $imageName);
         DB::table('struktur')
             ->insert([
                 'foto'          => $imageName,
