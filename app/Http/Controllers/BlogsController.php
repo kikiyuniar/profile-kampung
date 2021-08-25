@@ -11,11 +11,12 @@ class BlogsController extends Controller
     {
         return view('admin.news');
     }
-    public function list()
-    {
-        $articles = DB::table('blogs')->orderBy('id', 'desc')->paginate(5);
-        return view('admin.list-news', ['data' => $articles]);
-    }
+    // public function list()
+    // {
+    //     $articles = DB::table('blogs')->orderBy('id', 'desc')->paginate(5);
+    //     return view('admin.add-news', ['data' => $articles]);
+    // }
+
 
     public function add_news(Request $request)
     {
@@ -52,7 +53,8 @@ class BlogsController extends Controller
         return redirect()->back()->with('success', 'News Berhasil Diperbaruhi');
     }
 
-    public function del(Request $request)
+
+    public function delete(Request $request)
     {
         DB::table('blogs')->where('id', '=', $request->id)->delete();
         return redirect()->back()->with('danger', 'Berhasil Di Hapus');
@@ -62,6 +64,13 @@ class BlogsController extends Controller
         $detail = DB::table('blogs')->where('id', $request->id)->get();
 
         return view('admin.edit-news', ['data' => $detail]);
+    }
+
+    public function detail_front(Request $request)
+    {
+        $detail = DB::table('blogs')->where('slug', $request->slug)->get();
+
+        return view('front.detail-blog', ['data' => $detail]);
     }
 
     public function news_front()

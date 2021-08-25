@@ -19,4 +19,9 @@ class AdminController extends Controller
             'contact' => $msg
         ]);
     }
+    public function list()
+    {
+        $articles = DB::table('blogs')->orderBy('id', 'desc')->paginate(5);
+        return view('admin.add-news', ['data' => $articles]);
+    }
 }

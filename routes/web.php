@@ -22,7 +22,6 @@ use App\Http\Controllers\UmkmComtroller;
 |
 */
 
-Route::get('/', [Controller::class, 'home']);
 Route::get('/news_front', [BlogsController::class, 'news_front']);
 Route::get('/struktur_org', [StrukturController::class, 'struktur_front']);
 Route::get('/umkm', [UmkmComtroller::class, 'umkm_front']);
@@ -48,6 +47,7 @@ Route::group(
         Route::post('register', [AuthController::class, 'register']);
         Route::get('list_account', [AuthController::class, 'list']);
         Route::get('/delete/{id}', [AuthController::class, 'delete']);
+        Route::get('/listnews', [AuthController::class, 'list_news_admin']);
 
         Route::get('/edit/{id}', [AuthController::class, 'show_edit_account']);
         Route::post('action_edit_account', [AuthController::class, 'action_edit_account']);
@@ -61,8 +61,8 @@ Route::group(
         Route::post('/action_edit_news', [BlogsController::class, 'action_edit_news']);
         Route::get('news', [BlogsController::class, 'index']);
         Route::post('add_news', [BlogsController::class, 'add_news']);
-        Route::get('list_news', [BlogsController::class, 'list']);
-        Route::get('/del/{id}', [BlogsController::class, 'del']);
+        Route::get('/del/{id}', [BlogsController::class, 'delete']);
+        // Route::get('list_news', [BlogsController::class, 'list']);
         Route::get('/{id}', [BlogsController::class, 'detail']);
         Route::get('view_edit_news', [BlogsController::class, 'view_edit_news']);
 
@@ -72,3 +72,7 @@ Route::group(
         Route::post('post_umkm', [UmkmComtroller::class, 'post_umkm']);
     }
 );
+
+Route::get('/', [Controller::class, 'home'])->name('home');
+
+Route::get('/baca/{slug}', [BlogsController::class, 'detail_front']);

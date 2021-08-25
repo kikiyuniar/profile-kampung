@@ -23,25 +23,6 @@
         <div class="card mb-5">
             <div class="card-body">
                 <div class="row">
-                    {{-- <div class="col-12 col-sm-7 col-lg-9 col-xxl-10 text-end mb-1">
-                        <div class="d-inline-block">
-                            <a href="print" class="btn btn-icon btn-icon-only btn-outline-muted btn-sm datatable-print" type="button"
-                                data-datatable="#datatableHover">
-                                <i data-cs-icon="print"></i>
-                            </a>
-                            <div class="d-inline-block datatable-export" data-datatable="#datatableHover">
-                                <button class="btn btn-icon btn-icon-only btn-outline-muted btn-sm dropdown"
-                                    data-bs-toggle="dropdown" type="button" data-bs-offset="0,3">
-                                    <i data-cs-icon="download"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                    <button class="dropdown-item export-copy" type="button">Copy</button>
-                                    <button class="dropdown-item export-excel" type="button">Excel</button>
-                                    <button class="dropdown-item export-cvs" type="button">Cvs</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                     @if ($message = Session::get('danger'))
                     <div style="text-align: center" class="alert alert-danger alert-dismissible fade show" role="alert">
                         <strong>{{ $message }}</strong>
@@ -69,7 +50,7 @@
                             <th style="width: 15%" class="text-muted text-small text-uppercase">Action</th>
                         </tr>
                     </thead>
-                    @foreach ($data as $item)
+                    @foreach ($data_news as $item)
                     <tbody>
                         <tr>
                             <td>{{$item->judul}}</td>
@@ -88,7 +69,7 @@
                                     </svg>
                                     Detail
                                 </a>
-                                <a class="btn btn-outline-danger mb-1" href="/del/{{ $item->id}}">
+                                <a class="btn btn-outline-danger mb-1" href="del/{{ $item->id}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash" viewBox="0 0 16 16">
                                         <path
@@ -106,7 +87,7 @@
                     @endforeach
                 </table>
                 </div>
-                {!! $data->links('vendor.pagination.bootstrap-4') !!}
+                {!! $data_news->links('vendor.pagination.bootstrap-4') !!}
             </div>
         </div>
     </section>

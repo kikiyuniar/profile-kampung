@@ -97,6 +97,12 @@ class AuthController extends Controller
         return view('admin.list-account', ['data' => $articles]);
     }
 
+    public function list_news_admin()
+    {
+        $news = DB::table('blogs')->orderByDesc('id')->paginate('5');
+        return view('admin.list-news', ['data_news' => $news]);
+    }
+
     public function delete(Request $request)
     {
         DB::table('users')->where('id', '=', $request->id)->delete();

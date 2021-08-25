@@ -115,43 +115,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
-                    {{-- <div style="text-align: justify" class="s-6 m-6 l-3 margin-bottom">
-                        <i class="icon-tablet icon3x"></i>
-                        <h2>Visi</h2>
-                        <p>
-                            <li>Terwujudnya Usaha Kecil Menengah yang Maju dan Mandiri </li>
-                            <li>Transparansi administrasi menuju tata kelola desa yang baik dan efisien</li>
-                        </p>
-                    </div> --}}
-                    {{--  <div style="text-align: justify"  class="s-6 m-6 l-3 margin-bottom">
-                        <i class="icon-isight icon3x"></i>
-                        <h2>Misi</h2>
-                        <p>
-                            <li>Meningkatkan sumber daya manusia</li>
-                            <li>Menjaga ketentraman & ketertiban untuk mewujudkan desa yang aman dan makmur</li>
-                            <li>Meningkatkan partisipasi masyarakat dengan membuka komunikasi yang baik</li>
-                        </p>
-                    </div>
-
-                    <a href="{{url('struktur')}}" target="_blank" rel="noopener noreferrer">
-                    <div class="s-12 m-6 l-3 margin-bottom">
-                        <i class="icon-star icon3x"></i>
-                        <h2>Struktur Organisasi</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt
-                            ut laoreet dolore magna erat volutpat.</p>
-                    </div>
-                    </a>
-                    <a href="{{url('umkm')}}" target="_blank" rel="noopener noreferrer">
-                        <div class="s-12 m-6 l-3 margin-bottom">
-                            <i class="icon-heart icon3x"></i>
-                            <h2>Data UMKM</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt
-                                ut laoreet dolore magna aliquam erat volutpat nonummy.</p>
-                        </div>
-                    </a> --}}
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -234,7 +198,7 @@
                     </div>
                     <div class="s-12 l-10">
                         <div class="news-text">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="{{('baca/'.$item->slug)}}" rel="noopener noreferrer">
                                 <h4>{{$item->judul}}</h4>
                             </a>
                             <p>{!! nl2br($item->isi_thumbnail)!!}</p>

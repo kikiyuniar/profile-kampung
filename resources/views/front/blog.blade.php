@@ -28,7 +28,7 @@
                             <h5 class="card-title">{{$item->judul}}</h5>
                             <p class="card-text"><small class="text-muted">{{ date("l, d F Y", strtotime($item->waktu)) }}</small></p>
                             <p class="card-text">{!! nl2br($item->isi_thumbnail)!!}</p>
-                            <a href="#" style="color: white" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{url('baca/'.$item->slug)}}" style="color: white" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
