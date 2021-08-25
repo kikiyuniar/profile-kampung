@@ -19,12 +19,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="card mb-5">
+                    <div>
                         @foreach ($data as $item)
 
-                        <div class="shadow card-body">
+                        <div class="">
                             <img style="display:block;margin-left: auto;margin-right: auto;"
-                                src="{{asset('/img_post/'.$item->foto)}}" class="img-fluid rounded"
+                                src="{{asset('/img_post/'.$item->foto)}}" class=""
                                 alt="Responsive image">
                         </div>
 
