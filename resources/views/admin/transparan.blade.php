@@ -17,24 +17,45 @@
                             <form action="/update_transparan" method="post">
                                 @csrf
                                 @if ($message = Session::get('success'))
-                                <div style="text-align: center" class="alert alert-success alert-dismissible fade show" role="alert">
+                                <div style="text-align: center" class="alert alert-success alert-dismissible fade show"
+                                    role="alert">
                                     <strong>{{ $message }}</strong>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
                                 </div>
                                 @endif
                                 @foreach ($data as $tampilkan)
                                 <input type="id" name="id" value="{{$tampilkan->id}}" hidden>
-                                <div class="form-floating mb-3">
-                                    <input type="judul" name="judul" class="form-control" placeholder="judul" value="{{$tampilkan->judul}}">
-                                    <label>Judul</label>
+
+                                <div class="col">                                    
+                                    <div class="col-12 col-xl-8 mb-5">
+                                        <h2 class="small-title">Video Tutorial mendapatkan link embed</h2>
+                                        <div class="card h-100-card sh-md-45 bg-transparent">
+                                            <video class="player cover" poster="img/product/large/bread.jpg"
+                                                id="videoGuide">
+                                                <source
+                                                    src="{{URL::asset('dashboard')}}/tutor.mp4                                                 "
+                                                    type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="embed" class="form-control" placeholder="embed" value="{{$tampilkan->embed}}">
-                                    <label>Embed</label>
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="judul" name="judul" class="form-control" placeholder="judul"
+                                            value="{{$tampilkan->judul}}">
+                                        <label>Judul</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="embed" class="form-control" placeholder="embed"
+                                            value="{{$tampilkan->embed}}">
+                                        <label>Embed</label>
+                                    </div>
                                 </div>
                                 <label> Address</label>
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Address" rows="3" name="isi">{{$tampilkan->isi}}</textarea>
+                                    <textarea class="form-control" placeholder="Address" rows="3"
+                                        name="isi">{{$tampilkan->isi}}</textarea>
                                     <script>
                                         CKEDITOR.replace('isi');
                                     </script>

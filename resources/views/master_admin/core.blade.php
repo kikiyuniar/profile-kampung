@@ -47,18 +47,13 @@
     <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/main.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/datatables.min.css">
-    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/balloon/ckeditor.js"></script> -->
-    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/balloon-block/ckeditor.js"></script> -->
+    <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/glide.core.min.css">
+    <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/introjs.min.css">
+    <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/select2.min.css">
+    <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/plyr.css">
     <script src="{{URL::asset('dashboard')}}/js/base/loader.js"></script>
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js">
-    </script> --}}
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"> --}}
-    {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css"> --}}
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> --}}
 
 </head>
 
@@ -191,9 +186,9 @@
 
                         {{-- <li>
                             <a href="{{ route('logout') }}">
-                                <i data-cs-icon="logout" class="icon" data-cs-size="18"></i>
-                                <span class="label">Logout</span>
-                            </a>
+                        <i data-cs-icon="logout" class="icon" data-cs-size="18"></i>
+                        <span class="label">Logout</span>
+                        </a>
                         </li> --}}
                     </ul>
                 </div>
@@ -534,6 +529,19 @@
         <script src="{{URL::asset('dashboard')}}/js/scripts.js"></script>
         <script src="{{URL::asset('dashboard')}}/js/cs/datatable.extend.js"></script>
         <script src="{{URL::asset('dashboard')}}/js/plugins/datatable.boxedvariations.js"></script>
+
+
+        <script src="{{URL::asset('dashboard')}}/js/vendor/Chart.bundle.min.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/vendor/chartjs-plugin-datalabels.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/vendor/chartjs-plugin-rounded-bar.min.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/vendor/glide.min.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/vendor/intro.min.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/vendor/select2.full.min.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/vendor/plyr.min.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/cs/glide.custom.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/cs/charts.extend.js"></script>
+        <script src="{{URL::asset('dashboard')}}/js/pages/dashboard.default.js"></script>
+
         <script>
             window.setTimeout("waktu()", 1000);
 
