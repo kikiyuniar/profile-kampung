@@ -6,26 +6,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>Login</title>
     <meta name="description" content="Login Page">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="dashboard/img/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="dashboard/img/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="dashboard/img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="dashboard/img/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="dashboard/img/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="dashboard/img/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="dashboard/img/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="dashboard/img/favicon/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="dashboard/img/favicon/favicon-196x196.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="dashboard/img/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="dashboard/img/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="dashboard/img/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="dashboard/img/favicon/favicon-128.png" sizes="128x128">
-    <meta name="application-name" content="&nbsp;">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="dashboard/img/favicon/mstile-144x144.png">
-    <meta name="msapplication-square70x70logo" content="dashboard/img/favicon/mstile-70x70.png">
-    <meta name="msapplication-square150x150logo" content="dashboard/img/favicon/mstile-150x150.png">
-    <meta name="msapplication-wide310x150logo" content="dashboard/img/favicon/mstile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="dashboard/img/favicon/mstile-310x310.png">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&amp;display=swap"
         rel="stylesheet">
@@ -35,8 +15,6 @@
     <link rel="stylesheet" href="dashboard/css/vendor/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="dashboard/css/styles.css">
     <link rel="stylesheet" href="dashboard/css/main.css">
-
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> --}}
     <script src="dashboard/js/base/loader.js"></script>
 </head>
 
@@ -70,8 +48,8 @@
                         class="sw-lg-70 min-h-100 bg-foreground d-flex justify-content-center align-items-center shadow-deep py-5 full-page-content-right-border">
                         <div class="sw-lg-50 px-5">
                             <div class="sh-11">
-                                <a href="index-2.html">
-                                    <div class="logo-default"></div>
+                                <a href=" ">
+                                    <p id="myP" style="font:italic bold 30px Georgia,serif;">Login to Dashboard</p>
                                 </a>
                             </div>
                             <div class="mb-5">
@@ -145,9 +123,13 @@
     <script src="dashboard/js/common.js"></script>
     <script src="dashboard/js/scripts.js"></script>
     <script src="dashboard/js/cs/scrollspy.js"></script>
+    <script>
+        function myFunction() {
+            console.log(document.getElementById("myP").style.font);
+        }
+
+    </script>
 
 </body>
-
-<!-- Mirrored from acorn-html-classic-dashboard.coloredstrategies.com/Pages.Authentication.Login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Aug 2021 05:50:22 GMT -->
 
 </html>

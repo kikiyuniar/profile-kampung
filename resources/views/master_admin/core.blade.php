@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>@yield('title')</title>
-    <meta name="description"
+    {{-- <meta name="description"
         content="Dashboard pages contains different layouts to provide stats, graphics, listings, categories, banners and so on. They have various implementations of plugins such as Datatables, Chart.js, Glide.js and Plyr.js with alternative extensions.">
     <link rel="apple-touch-icon-precomposed" sizes="57x57"
         href="{{URL::asset('dashboard')}}/img/favicon/apple-touch-icon-57x57.png">
@@ -28,14 +28,14 @@
     <link rel="icon" type="image/png" href="{{URL::asset('dashboard')}}/img/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="{{URL::asset('dashboard')}}/img/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="{{URL::asset('dashboard')}}/img/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="{{URL::asset('dashboard')}}/img/favicon/favicon-128.png" sizes="128x128">
-    <meta name="application-name" content="&nbsp;">
+    <link rel="icon" type="image/png" href="{{URL::asset('dashboard')}}/img/favicon/favicon-128.png" sizes="128x128"> --}}
+    {{-- <meta name="application-name" content="&nbsp;">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="{{URL::asset('dashboard')}}/img/favicon/mstile-144x144.png">
     <meta name="msapplication-square70x70logo" content="{{URL::asset('dashboard')}}/img/favicon/mstile-70x70.png">
     <meta name="msapplication-square150x150logo" content="{{URL::asset('dashboard')}}/img/favicon/mstile-150x150.png">
     <meta name="msapplication-wide310x150logo" content="{{URL::asset('dashboard')}}/img/favicon/mstile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="{{URL::asset('dashboard')}}/img/favicon/mstile-310x310.png">
+    <meta name="msapplication-square310x310logo" content="{{URL::asset('dashboard')}}/img/favicon/mstile-310x310.png"> --}}
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&amp;display=swap"
         rel="stylesheet">
@@ -54,18 +54,17 @@
     <link rel="stylesheet" href="{{URL::asset('dashboard')}}/css/vendor/plyr.css">
     <script src="{{URL::asset('dashboard')}}/js/base/loader.js"></script>
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-
+<script>
+function myFunction() {
+    console.log(document.getElementById("myP").style.font);
+}
+</script>
 </head>
 
 <body>
     <div id="root">
         <div id="nav" class="nav-container d-flex">
             <div class="nav-content d-flex">
-                <div class="logo position-relative">
-                    <a href="{{url('/admin')}}">
-                        <div class="img"></div>
-                    </a>
-                </div>
                 <div class="user-container d-flex">
                     <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -566,13 +565,11 @@
             });
 
         </script>
-        {{-- <script>
-            CKEDITOR.replace('isi_thumbnail', {
-                filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
-        filebrowserUploadMethod: 'form'
-        });
-
-        </script> --}}
+        <script>
+function myFunction() {
+    console.log(document.getElementById("myP").style.font);
+}
+</script>
 </body>
 
 </html>
