@@ -155,6 +155,7 @@
             <h2 class="section-title">Latest News</h2>
             <div class="margin">
                 @foreach ($data as $item)
+                <a href="{{('baca/'.$item->slug)}}" rel="noopener noreferrer">
                 <div class="s-12 m-12 l-6">
                     <div class="s-12 l-2">
                         <div class="news-date">
@@ -165,13 +166,12 @@
                     </div>
                     <div class="s-12 l-10">
                         <div class="news-text">
-                            <a href="{{('baca/'.$item->slug)}}" rel="noopener noreferrer">
                                 <h4>{{$item->judul}}</h4>
-                            </a>
                             <p>{!! nl2br($item->isi_thumbnail)!!}</p>
                         </div>
                     </div>
                 </div>
+                </a>
                 @endforeach
                 <div class="s-12 m-6 l-12">
                     <br>
