@@ -32,7 +32,7 @@
                                 </div>
                                 <label> Input FOTO</label>
                                 <div class="mb-3 form-group files">
-                                    <input type="file" class="form-control" name="foto">
+                                    <input type="file" class="form-control" name="foto" required>
                                 </div>
                                 <input type="text" name="slug" hidden>
                                 <label class="mb-2">Isi Thumbnail ( Max 200 kata)</label>
