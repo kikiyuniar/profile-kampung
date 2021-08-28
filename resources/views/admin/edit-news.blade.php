@@ -54,7 +54,7 @@
                                     </script>
                                 </div>
                                 <button class="btn btn-primary" type="submit">Update</button>
-                                <a class="btn btn-danger" href="list_news">Back</a>
+                                <a class="btn btn-danger" href="listnews">Back</a>
                             </form>
                             @endforeach                                                            
                         </div>
