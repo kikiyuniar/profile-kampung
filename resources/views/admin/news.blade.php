@@ -1,6 +1,8 @@
 @extends('master_admin.core')
 @section('title','Dashboard')
 @section('container2')
+<link rel="stylesheet" href="{{URL::asset('front')}}/css/drop-file.css">
+
 <main>
     <div class="container">
         <div class="row">
@@ -14,7 +16,7 @@
                     <h2 class="small-title">Floating Label</h2>
                     <div class="card mb-5">
                         <div class="card-body">
-                            <form action="/add_news" method="post">
+                            <form action="/add_news" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @if ($message = Session::get('success'))
                                 <div style="text-align: center" class="alert alert-success alert-dismissible fade show"
@@ -27,6 +29,10 @@
                                 <div class="form-floating mb-3">
                                     <input type="text" name="judul" class="form-control" placeholder="judul_news" required>
                                     <label>Judul</label>
+                                </div>
+                                <label> Input FOTO</label>
+                                <div class="mb-3 form-group files">
+                                    <input type="file" class="form-control" name="foto">
                                 </div>
                                 <input type="text" name="slug" hidden>
                                 <label class="mb-2">Isi Thumbnail ( Max 200 kata)</label>

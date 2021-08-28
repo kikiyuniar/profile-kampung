@@ -22,8 +22,9 @@
             <div class="row">
                 @foreach ($data as $item)
                 {{-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
-                <div class="col-sm-12 mb-5">
+                <div class="col-sm-6 mb-5">
                     <div class="card">
+                        <img style="display:block;margin-left: auto;margin-right: auto;width: 300px;" src="{{URL::asset('img_news/'.$item->foto)}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{$item->judul}}</h5>
                             <p class="card-text"><small class="text-muted">{{ date("l, d F Y", strtotime($item->waktu)) }}</small></p>

@@ -19,8 +19,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$item->judul}}</h5>
                             <p class="card-text"><small
-                                    class="text-muted">{{ date("l, d F Y", strtotime($item->waktu)) }}</small></p>
-                            <p class="card-text">{!! nl2br($item->isi)!!}</p>
+                                class="text-muted">{{ date("l, d F Y", strtotime($item->waktu)) }}</small></p>
+                                <img style="display:block;margin-left: auto;margin-right: auto;width: 400px;" src="{{URL::asset('img_news/'.$item->foto)}}" class="card-img-top" alt="...">
+                                <p class="card-text">{!! nl2br($item->isi)!!}</p>
                         </div>
                     </div>
                 </div>

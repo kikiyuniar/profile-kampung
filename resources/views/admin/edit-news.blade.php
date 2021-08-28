@@ -15,7 +15,7 @@
                     <div class="card mb-5">
                         <div class="card-body">
                             @foreach ($data as $item)     
-                            <form action="/action_edit_news" method="post">
+                            <form action="/action_edit_news" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @if ($message = Session::get('success'))
                                 <div style="text-align: center" class="alert alert-success alert-dismissible fade show"
@@ -29,6 +29,12 @@
                                 <div class="form-floating mb-3">
                                     <input type="text" name="judul" class="form-control" placeholder="judul_news" value="{{$item->judul}}" required>
                                     <label>Judul</label>
+                                </div>
+                                <label> Input FOTO</label>
+                                <div class="mb-3 form-group files">
+                                    <img style="width: 200px;" src="{{asset('/img_news/'.$item->foto)}}" class="img-fluid rounded mb-5"
+                                                alt="Responsive image">
+                                    <input type="file" class="form-control" name="foto">
                                 </div>
                                 <input type="text" name="slug" hidden>
                                 <label>Isi Thumbnail</label>

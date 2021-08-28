@@ -186,7 +186,7 @@
             <h2 class="section-title">Contact Us</h2>
             <div class="margin">
                 <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
-                    <img src="{{URL::asset('front')}}/img/contact.jpg" alt="">
+                    <img src="{{URL::asset('front')}}/img/FULL.png" alt="">
                 </div>
                 <div class="s-12 m-12 l-4 margin-bottom right-align">
                     <h3>LEBAK JAYA 5 UTARA</h3>

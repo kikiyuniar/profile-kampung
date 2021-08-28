@@ -20,6 +20,8 @@ class BlogsController extends Controller
 
     public function add_news(Request $request)
     {
+        $imageName = time() . '.' . $request->foto->extension();
+        $request->foto->move(public_path('img_news'), $imageName);
         $slug_judul = str_replace(" ", "-", $request->judul);
         DB::table('blogs')
             ->insert([
@@ -27,6 +29,7 @@ class BlogsController extends Controller
                 'slug'   => $slug_judul,
                 'waktu'       => $request->waktu,
                 'isi_thumbnail' => $request->isi_thumbnail,
+                'foto'         => $imageName,
                 'isi'           => $request->isi
             ]);
         return redirect('/listnews')->with('success', 'Berhasil Di Tambahkan');
@@ -43,11 +46,14 @@ class BlogsController extends Controller
         //         'isi'   => $request->input('isi'),
 
         //     ]);
+        $imageName = time() . '.' . $request->foto->extension();
+        $request->foto->move(public_path('img_news'), $imageName);
         DB::table('blogs')->where('id', $request->id)
             ->update([
                 'judul'    => $request->judul,
                 'isi'           => $request->isi,
-                'isi_thumbnail' => $request->isi_thumbnail
+                'isi_thumbnail' => $request->isi_thumbnail,
+                'foto'         => $imageName,
             ]);
 
         return redirect()->back()->with('success', 'News Berhasil Diperbaruhi');
