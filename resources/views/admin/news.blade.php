@@ -58,7 +58,7 @@
                                 echo '<input type="date" name="waktu" class="form-control" id="datePickerValue" value="'. date('d-m-Y') .'" required></div>';
                                 ?>
                                 <button class="btn btn-primary" type="submit">Submit</button>
-                                <a class="btn btn-danger" href="list_news">Cancel</a>
+                                <a class="btn btn-danger" href="listnews">Cancel</a>
                             </form>
                         </div>
                     </div>
