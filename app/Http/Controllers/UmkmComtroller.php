@@ -38,4 +38,22 @@ class UmkmComtroller extends Controller
             ]);
         return redirect()->back()->with('success', 'Berhasil DiTambahkan');
     }
+
+    // public function del_umkm(Request $request)
+    // {
+    //     // $gambar = DB::table('umkm')->where('id', $request->id)->first();
+    //     var_dump('cek');
+    //     // DB::table('umkm')->delete('img_umkm/' . $gambar->foto);
+    //     // File::delete('data_file/' . $gambar->file);
+
+    //     // hapus data
+    //     // DB::table('umkm')->where('id', $request->id)->delete();
+
+    //     // return redirect()->back();
+    // }
+
+    public function cek_error()
+    {
+        echo "yoi";
+    }
 }

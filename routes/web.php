@@ -10,7 +10,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\StrukturController;
 use App\Http\Controllers\UmkmComtroller;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +70,7 @@ Route::group(
         Route::post('post_umkm', [UmkmComtroller::class, 'post_umkm']);
     }
 );
+Route::get('del-umkm', [UmkmComtroller::class, 'cek_error']);
 
 Route::get('/', [Controller::class, 'home'])->name('home');
 
